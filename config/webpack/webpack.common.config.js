@@ -10,7 +10,6 @@ module.exports = {
   entry: {
     app: './js/app.js'
   },
-  target: ['web', /* 'es5' */],
   plugins: [
     htmlPlugin
   ],
