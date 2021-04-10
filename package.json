@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "author": "Solovyev Aleksey <solovyev.a@icloud.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack --config ./config/webpack.config.js"
+  },
   "devDependencies": {
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0"
