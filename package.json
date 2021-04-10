@@ -4,7 +4,7 @@
   "author": "Solovyev Aleksey <solovyev.a@icloud.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack --env development --config ./config/webpack.config.js",
+    "dev": "webpack serve --env development --config ./config/webpack.config.js",
     "build": "webpack --env production --config ./config/webpack.config.js"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "simple-nunjucks-loader": "^3.1.0",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
   }
 }
