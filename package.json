@@ -4,10 +4,12 @@
   "author": "Solovyev Aleksey <solovyev.a@icloud.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack --config ./config/webpack.config.js"
+    "dev": "webpack --env development --config ./config/webpack.config.js",
+    "build": "webpack --env production --config ./config/webpack.config.js"
   },
   "devDependencies": {
     "webpack": "^5.31.2",
-    "webpack-cli": "^4.6.0"
+    "webpack-cli": "^4.6.0",
+    "webpack-merge": "^5.7.3"
   }
 }
