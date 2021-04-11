@@ -3,6 +3,10 @@ const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 
+/**
+ * Simplifies creation of HTML files.
+ * https://github.com/jantimon/html-webpack-plugin
+ */
 module.exports = fs.readdirSync(path.resolve(process.cwd(), 'src')).map(templateName => {
   if (!/\.(njk|nunjucks|html)$/i.test(templateName)) return false
 

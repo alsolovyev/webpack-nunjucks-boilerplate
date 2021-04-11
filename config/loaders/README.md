@@ -19,3 +19,7 @@
 
 ## Assets
 - [asset modules](https://webpack.js.org/guides/asset-modules)
+
+## SVG
+- [svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)
+- [svgo-loader](https://github.com/svg/svgo-loader)
