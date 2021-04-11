@@ -7,8 +7,8 @@ module.exports = {
   use: {
     loader: 'simple-nunjucks-loader',
     options: {
-      assetsPaths: [SOURCE_DIR]
       searchPaths: ['src/njk'],
+      assetsPaths: ['src/images']
     }
   }
 }
