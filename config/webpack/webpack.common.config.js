@@ -11,6 +11,12 @@ module.exports = {
   entry: {
     common: ['./js/app.js', './sass/app.sass']
   },
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx', '.sass', '.png', '.jpg', '.svg'],
+    alias: {
+      '@': path.resolve(process.cwd(), 'src')
+    }
+  },
   plugins: [
     ...htmlPlugin
   ],
