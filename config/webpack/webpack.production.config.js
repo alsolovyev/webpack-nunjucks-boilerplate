@@ -10,7 +10,7 @@ module.exports = {
   devtool: 'source-map',
   output: {
     path: path.resolve(process.cwd(), 'dist'),
-    filename: 'js/[name].[fullhash:8].js',
+    filename: ({ chunk: { name } }) => `js/${ name === 'common' ? 'app' : name }.[fullhash:8].js`,
     clean: true
   },
   plugins: [

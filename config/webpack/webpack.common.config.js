@@ -8,10 +8,10 @@ module.exports = {
   name: 'webpack-common-config',
   context: path.resolve(process.cwd(), 'src'),
   entry: {
-    app: ['./js/app.js', './sass/app.sass']
+    common: ['./js/app.js', './sass/app.sass']
   },
   plugins: [
-    htmlPlugin
+    ...htmlPlugin
   ],
   module: {
     rules: [

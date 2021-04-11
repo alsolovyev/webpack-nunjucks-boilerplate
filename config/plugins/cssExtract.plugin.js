@@ -6,5 +6,5 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
  * https://webpack.js.org/plugins/mini-css-extract-plugin
  */
 module.exports = new MiniCssExtractPlugin({
-  filename: 'css/[name].[fullhash:8].css'
+  filename: ({ chunk: { name } }) => `css/${ name === 'common' ? 'app' : name }.[fullhash:8].css`,
 })
