@@ -4,8 +4,10 @@
   "author": "Solovyev Aleksey <solovyev.a@icloud.com>",
   "license": "MIT",
   "scripts": {
+    "start": "yarn dev",
     "dev": "webpack serve --env development --config ./config/webpack.config.js",
-    "build": "webpack --env production --config ./config/webpack.config.js"
+    "build": "webpack --env production --config ./config/webpack.config.js",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
