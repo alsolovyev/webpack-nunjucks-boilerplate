@@ -1,6 +1,3 @@
-const { SOURCE_DIR } = require('../helpers')
-
-
 /**
  * Loads nunjucks files.
  * https://github.com/ogonkov/nunjucks-loader
@@ -11,6 +8,7 @@ module.exports = {
     loader: 'simple-nunjucks-loader',
     options: {
       assetsPaths: [SOURCE_DIR]
+      searchPaths: ['src/njk'],
     }
   }
 }
