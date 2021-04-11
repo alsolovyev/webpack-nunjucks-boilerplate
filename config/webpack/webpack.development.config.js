@@ -1,5 +1,5 @@
 const chokidar = require('chokidar')
-const cssLoader = require('../loaders/css.loader.js')(true)
+const sassLoader = require('../loaders/sass.loader.js')(true)
 
 
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
   },
   module: {
     rules: [
-      cssLoader
+      sassLoader
     ]
   }
 }

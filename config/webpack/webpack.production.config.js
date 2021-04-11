@@ -1,4 +1,4 @@
-const cssLoader = require('../loaders/css.loader.js')(false)
+const sassLoader = require('../loaders/sass.loader.js')(false)
 const cssExtractPlugin = require('../plugins/cssExtract.plugin.js')
 
 
@@ -11,7 +11,7 @@ module.exports = {
   ],
   module: {
     rules: [
-      cssLoader
+      sassLoader
     ]
   }
 }

@@ -42,13 +42,24 @@ const postcssLoader = {
 }
 
 
+/**
+ * Loads a Sass/SCSS file and compiles it to CSS.
+ * https://github.com/webpack-contrib/sass-loader
+ */
+const sassLoader = {
+  loader: 'sass-loader',
+  options: {  }
+}
+
+
 module.exports = isDev => {
   return {
-    test: /\.css$/i,
+    test: /\.s[ac]ss$/i,
     use: [
       isDev ? styleLoader : miniCssExtractLoader,
       cssLoader,
-      !isDev && postcssLoader
+      !isDev && postcssLoader,
+      sassLoader
     ].filter(Boolean)
   }
 }
