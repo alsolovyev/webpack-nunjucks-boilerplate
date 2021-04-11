@@ -1,5 +1,6 @@
 const path = require('path')
 const sassLoader = require('../loaders/sass.loader.js')(false)
+const assetLoader = require('../loaders/asset.loader.js')(false)
 const cssExtractPlugin = require('../plugins/cssExtract.plugin.js')
 
 
@@ -18,7 +19,8 @@ module.exports = {
   ],
   module: {
     rules: [
-      sassLoader
+      sassLoader,
+      assetLoader
     ]
   }
 }

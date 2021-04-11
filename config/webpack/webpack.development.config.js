@@ -1,5 +1,6 @@
 const chokidar = require('chokidar')
 const sassLoader = require('../loaders/sass.loader.js')(true)
+const assetLoader = require('../loaders/asset.loader.js')(true)
 
 
 module.exports = {
@@ -21,7 +22,8 @@ module.exports = {
   },
   module: {
     rules: [
-      sassLoader
+      sassLoader,
+      assetLoader
     ]
   }
 }

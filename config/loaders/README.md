@@ -16,3 +16,6 @@
 - [postcss-loader](https://github.com/webpack-contrib/postcss-loader)
   - [postcss](https://github.com/postcss/postcss)
   - [autoprefixer](https://github.com/postcss/autoprefixer)
+
+## Assets
+- [asset modules](https://webpack.js.org/guides/asset-modules)
