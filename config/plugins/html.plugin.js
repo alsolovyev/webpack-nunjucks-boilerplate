@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 const { SOURCE_DIR } = require('../helpers')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
@@ -16,6 +17,7 @@ module.exports = fs.readdirSync(SOURCE_DIR).map(templateName => {
   return new HTMLWebpackPlugin({
     template: `${ templateName }`,
     filename: `${ filename }.html`,
-    chunks: ['common', filename]
+    chunks: ['common', filename],
+    templateParameters: require(path.resolve(SOURCE_DIR, 'data', 'nunjucks.data.js'))
   })
 }).filter(Boolean)
