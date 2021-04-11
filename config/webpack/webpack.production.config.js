@@ -1,3 +1,4 @@
+const path = require('path')
 const sassLoader = require('../loaders/sass.loader.js')(false)
 const cssExtractPlugin = require('../plugins/cssExtract.plugin.js')
 
@@ -8,6 +9,7 @@ module.exports = {
   target: ['web', /* 'es5' */],
   devtool: 'source-map',
   output: {
+    path: path.resolve(process.cwd(), 'dist'),
     filename: 'js/[name].[fullhash:8].js',
     clean: true
   },
