@@ -1,6 +1,6 @@
 const chokidar = require('chokidar')
-const sassLoader = require('../loaders/sass.loader.js')(true)
-const assetLoader = require('../loaders/asset.loader.js')(true)
+const sassLoader = require('../loaders/sass.loader.js')
+const assetLoader = require('../loaders/asset.loader.js')
 
 
 module.exports = {

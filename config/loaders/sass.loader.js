@@ -1,3 +1,6 @@
+const { IS_DEV_MODE } = require('../helpers')
+
+
 /**
  * Injects CSS into the DOM.
  * https://github.com/webpack-contrib/style-loader
@@ -52,14 +55,12 @@ const sassLoader = {
 }
 
 
-module.exports = isDev => {
-  return {
-    test: /\.s[ac]ss$/i,
-    use: [
-      isDev ? styleLoader : miniCssExtractLoader,
-      cssLoader,
-      !isDev && postcssLoader,
-      sassLoader
-    ].filter(Boolean)
-  }
+module.exports = {
+  test: /\.s[ac]ss$/i,
+  use: [
+    IS_DEV_MODE ? styleLoader : miniCssExtractLoader,
+    cssLoader,
+    !IS_DEV_MODE && postcssLoader,
+    sassLoader
+  ].filter(Boolean)
 }

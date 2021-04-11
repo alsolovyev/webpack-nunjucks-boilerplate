@@ -1,6 +1,6 @@
 const path = require('path')
-const sassLoader = require('../loaders/sass.loader.js')(false)
-const assetLoader = require('../loaders/asset.loader.js')(false)
+const sassLoader = require('../loaders/sass.loader.js')
+const assetLoader = require('../loaders/asset.loader.js')
 const cssExtractPlugin = require('../plugins/cssExtract.plugin.js')
 
 

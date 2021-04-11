@@ -6,9 +6,9 @@
   "version": "4.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "yarn dev",
-    "dev": "webpack serve --env development --config ./config/webpack.config.js",
-    "build": "webpack --env production --config ./config/webpack.config.js",
+    "start": "yarn serve",
+    "serve": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {
@@ -18,6 +18,7 @@
     "autoprefixer": "^10.2.5",
     "babel-loader": "^8.2.2",
     "chokidar": "^3.5.1",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.2.1",
     "eslint": "^7.24.0",
     "eslint-webpack-plugin": "^2.5.3",

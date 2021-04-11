@@ -1,3 +1,6 @@
+const { IS_DEV_MODE } = require('./helpers')
+
+
 /**
  * Eslint rules:
  *  - https://eslint.org/docs/rules/
@@ -20,7 +23,7 @@ module.exports = {
   extends: 'eslint:recommended',
   rules: {
     'indent': ['error', 2, { 'SwitchCase': 1 }],
-    'no-console': 'warn',
+    'no-console': IS_DEV_MODE ? 'warn' : 'error',
     'no-unexpected-multiline': 'off'
   }
 }
