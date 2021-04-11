@@ -1,6 +1,3 @@
-const path = require('path')
-
-
 /**
  * Eslint rules:
  *  - https://eslint.org/docs/rules/
@@ -17,7 +14,7 @@ module.exports = {
   parser: '@babel/eslint-parser',
   parserOptions: {
     babelOptions: {
-      configFile: path.resolve(process.cwd(), 'config', '.babelrc.js')
+      configFile: './config/.babelrc.js'
     }
   },
   extends: 'eslint:recommended',
