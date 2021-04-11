@@ -6,6 +6,7 @@ module.exports = {
   name: 'webpack-development-config',
   mode: 'development',
   target: 'web',
+  devtool: 'eval-source-map',
   devServer: {
     host: '0.0.0.0',
     port: process.env.PORT || 8080,

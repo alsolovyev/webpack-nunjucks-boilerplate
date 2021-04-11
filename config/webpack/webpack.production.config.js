@@ -6,6 +6,7 @@ module.exports = {
   name: 'webpack-production-config',
   mode: 'production',
   target: ['web', /* 'es5' */],
+  devtool: 'source-map',
   output: {
     filename: 'js/[name].[fullhash:8].js'
   },
