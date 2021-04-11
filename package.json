@@ -1,6 +1,56 @@
 {
   "name": "webpack-boilerplate",
-  "version": "0.0.1",
-  "author": "Solovyev Aleksey <solovyev.a@icloud.com>",
-  "license": "MIT"
+  "description": "Webpack boilerplate for static websites that has all the necessary modern tools and optimizations built-in",
+  "repository": "git@github.com:alsolovyev/webpack-boilerplate.git",
+  "author": "janeRivas <solovyev.a@icloud.com> (https://github.com/alsolovyev)",
+  "version": "4.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn serve",
+    "serve": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/preset-env": "^7.13.15",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "chokidar": "^3.5.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.1",
+    "eslint": "^7.24.0",
+    "eslint-webpack-plugin": "^2.5.3",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.1",
+    "nunjucks": "^3.2.3",
+    "postcss": "^8.2.9",
+    "postcss-loader": "^5.2.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "simple-nunjucks-loader": "^3.1.0",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-webpack-plugin": "^2.1.1",
+    "svg-sprite-loader": "^6.0.5",
+    "svgo-loader": "^3.0.0",
+    "ts-loader": "^8.1.0",
+    "typescript": "^4.2.4",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
