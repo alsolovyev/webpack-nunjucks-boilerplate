@@ -1,4 +1,4 @@
-const path = require('path')
+const { SOURCE_DIR } = require('../helpers')
 
 
 /**
@@ -10,7 +10,7 @@ module.exports = {
   use: {
     loader: 'simple-nunjucks-loader',
     options: {
-      assetsPaths: [path.resolve(process.cwd(), 'src')]
+      assetsPaths: [SOURCE_DIR]
     }
   }
 }

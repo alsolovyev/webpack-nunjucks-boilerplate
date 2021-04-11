@@ -1,4 +1,6 @@
 const path = require('path')
+const { SOURCE_DIR } = require('../helpers')
+
 
 /**
  * Transpils JavaScript files using Babel.
@@ -17,7 +19,7 @@ const babelLoader = {
 const typescriptLoader = {
   loader: 'ts-loader',
   options: {
-    context: path.resolve(process.cwd(), 'src'),
+    context: SOURCE_DIR,
     configFile: path.resolve(process.cwd(), 'config', 'tsconfig.json')
   }
 }

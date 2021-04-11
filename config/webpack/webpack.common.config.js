@@ -1,4 +1,4 @@
-const path = require('path')
+const { SOURCE_DIR } = require('../helpers')
 const htmlPlugin = require('../plugins/html.plugin.js')
 const eslintPlugin = require('../plugins/eslint.plugin.js')
 const stylelintPlugin = require('../plugins/stylelint.plugin.js')
@@ -10,14 +10,14 @@ const svgLoader = require('../loaders/svg.loader.js')
 
 module.exports = {
   name: 'webpack-common-config',
-  context: path.resolve(process.cwd(), 'src'),
+  context: SOURCE_DIR,
   entry: {
     common: ['./js/app.js', './sass/app.sass']
   },
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.sass', '.png', '.jpg', '.svg'],
     alias: {
-      '@': path.resolve(process.cwd(), 'src')
+      '@': SOURCE_DIR
     }
   },
   stats: { all: false },

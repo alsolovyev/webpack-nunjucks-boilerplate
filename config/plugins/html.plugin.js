@@ -1,5 +1,5 @@
 const fs = require('fs')
-const path = require('path')
+const { SOURCE_DIR } = require('../helpers')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 
@@ -7,7 +7,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
  * Simplifies creation of HTML files.
  * https://github.com/jantimon/html-webpack-plugin
  */
-module.exports = fs.readdirSync(path.resolve(process.cwd(), 'src')).map(templateName => {
+module.exports = fs.readdirSync(SOURCE_DIR).map(templateName => {
   if (!/\.(njk|nunjucks|html)$/i.test(templateName)) return false
 
   let filename = templateName.split('.')[0]

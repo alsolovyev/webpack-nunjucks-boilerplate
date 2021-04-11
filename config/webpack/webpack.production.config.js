@@ -1,4 +1,4 @@
-const path = require('path')
+const { OUTPUT_DIR, PUBLIC_PATH } = require('../helpers')
 const sassLoader = require('../loaders/sass.loader.js')
 const assetLoader = require('../loaders/asset.loader.js')
 const cssExtractPlugin = require('../plugins/cssExtract.plugin.js')
@@ -10,7 +10,8 @@ module.exports = {
   target: ['web', /* 'es5' */],
   devtool: 'source-map',
   output: {
-    path: path.resolve(process.cwd(), 'dist'),
+    publicPath: PUBLIC_PATH,
+    path: OUTPUT_DIR,
     filename: ({ chunk: { name } }) => `js/${ name === 'common' ? 'app' : name }.[fullhash:8].js`,
     clean: true
   },
