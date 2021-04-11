@@ -14,6 +14,15 @@ module.exports = {
     filename: ({ chunk: { name } }) => `js/${ name === 'common' ? 'app' : name }.[fullhash:8].js`,
     clean: true
   },
+  stats: {
+    assets: true,
+    groupAssetsByChunk: true,
+    errors: true,
+    warnings: true,
+    colors: true,
+    builtAt: true,
+    publicPath: true
+  },
   plugins: [
     cssExtractPlugin
   ],

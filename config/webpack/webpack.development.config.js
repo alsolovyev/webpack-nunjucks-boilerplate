@@ -20,6 +20,12 @@ module.exports = {
       ignored: ['node_modules/**']
     }
   },
+  stats: {
+    errors: true,
+    warnings: true,
+    colors: true,
+    builtAt: true
+  },
   module: {
     rules: [
       sassLoader,

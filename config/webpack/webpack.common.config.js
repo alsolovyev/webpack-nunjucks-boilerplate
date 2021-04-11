@@ -20,6 +20,7 @@ module.exports = {
       '@': path.resolve(process.cwd(), 'src')
     }
   },
+  stats: { all: false },
   plugins: [
     ...htmlPlugin,
     eslintPlugin,
