@@ -1,4 +1,5 @@
 const chokidar = require('chokidar')
+const cssLoader = require('../loaders/css.loader.js')(true)
 
 
 module.exports = {
@@ -16,5 +17,10 @@ module.exports = {
     watchOptions: {
       ignored: ['node_modules/**']
     }
+  },
+  module: {
+    rules: [
+      cssLoader
+    ]
   }
 }

@@ -8,7 +8,7 @@ module.exports = {
   name: 'webpack-common-config',
   context: path.resolve(process.cwd(), 'src'),
   entry: {
-    app: './js/app.js'
+    app: ['./js/app.js', './css/app.css']
   },
   plugins: [
     htmlPlugin
