@@ -8,7 +8,8 @@ module.exports = {
   target: ['web', /* 'es5' */],
   devtool: 'source-map',
   output: {
-    filename: 'js/[name].[fullhash:8].js'
+    filename: 'js/[name].[fullhash:8].js',
+    clean: true
   },
   plugins: [
     cssExtractPlugin
