@@ -1,0 +1,10 @@
+/**
+ * Fix blurry CSS animations
+ *
+ * @param {boolean} addHardwareAcceleration - Add hardware acceleration to the animation
+ */
+@mixin fix-blurry($addHardwareAcceleration: false)
+  @if $addHardwareAcceleration
+    transform: translateZ(0)
+  backface-visibility: hidden
+  -webkit-font-smoothing: subpixel-antialiased
