@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('en', true) }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ '[Dev] ' if isDev }}{{ title }}</title>
+  <link rel="icon" type="image/png" href="{% static 'favicon.png' %}"/>
+  <meta name="description" content="{{ description }}">
+  <meta name="author" content="{{ author }}">
+  <meta name="theme-color" content="{{ theme }}">
+  <meta name="msapplication-tap-highlight" content="no">
+</head>
+<body>
+  {# BEGIN Header #}
+  {% include 'layouts/_header.njk' %}
+  {# END Header #}
+
+  {# BEGIN Main #}
+  <main>{% block main %}{% endblock %}</main>
+  {# END Main #}
+
+  {# BEGIN Footer #}
+  {% include 'layouts/_footer.njk' %}
+  {# END Footer #}
+</body>
+</html>

@@ -1,0 +1,45 @@
+## 📘 Nunjucks filters
+
+[Create](https://mozilla.github.io/nunjucks/api#custom-filters) your own filters or use one of the [built-in](https://mozilla.github.io/nunjucks/templating.html#builtin-filters) filters:
+
+- [`abs`](https://mozilla.github.io/nunjucks/templating.html#abs) - Return the absolute value of the argument
+- [`batch`](https://mozilla.github.io/nunjucks/templating.html#batch) - Return a list of lists with the given number of items
+- [`capitalize`](https://mozilla.github.io/nunjucks/templating.html#capitalize) - Make the first letter uppercase
+- [`center`](https://mozilla.github.io/nunjucks/templating.html#center) - Center the value in a field of a given width
+- [`default`](https://mozilla.github.io/nunjucks/templating.html#default-value-default-boolean) - Return default if value is undefined
+- [`dictsort`](https://mozilla.github.io/nunjucks/templating.html#dictsort) - Sort a dict and yield (key, value) pairs
+- [`dump`](https://mozilla.github.io/nunjucks/templating.html#dump) - Call JSON.stringify on an object and dump the result into the template
+- [`escape`](https://mozilla.github.io/nunjucks/templating.html#escape-aliased-as-e) - Convert the characters *&*, *<*, *>*, *‘*, and *”* in strings to HTML-safe sequences
+- [`first`](https://mozilla.github.io/nunjucks/templating.html#first) - Get the first item in an array or the first letter if it's a string
+- [`float`](https://mozilla.github.io/nunjucks/templating.html#float) - Convert a value into a floating point number
+- [`forceescape`](https://mozilla.github.io/nunjucks/templating.html#forceescape) - Enforce HTML escaping
+- [`groupby`](https://mozilla.github.io/nunjucks/templating.html#groupby) - Group a sequence of objects by a common attribute
+- [`indent`](https://mozilla.github.io/nunjucks/templating.html#indent) - Indent a string using spaces
+- [`int`](https://mozilla.github.io/nunjucks/templating.html#int) - Convert the value into an integer
+- [`join`](https://mozilla.github.io/nunjucks/templating.html#join) - Return a string which is the concatenation of the strings in a sequence
+- [`last`](https://mozilla.github.io/nunjucks/templating.html#last) - Get the last item in an array or the last letter if it's a string
+- [`length`](https://mozilla.github.io/nunjucks/templating.html#length) - Return the length of an array or string, or the number of keys in an object
+- [`list`](https://mozilla.github.io/nunjucks/templating.html#list) - Convert the value into a list
+- [`lower`](https://mozilla.github.io/nunjucks/templating.html#lower) - Convert string to all lower case
+- [`nl2br`](https://mozilla.github.io/nunjucks/templating.html#nl2br) - Replace new lines with `<br />` HTML elements
+- [`random`](https://mozilla.github.io/nunjucks/templating.html#random) - Select a random value from an array
+- [`reject`](https://mozilla.github.io/nunjucks/templating.html#reject) - Filters a sequence of objects by applying a test to each object, and rejecting the objects with the test succeeding
+- [`rejectattr`](https://mozilla.github.io/nunjucks/templating.html#rejectattr-only-the-single-argument-form) - Filter a sequence of objects by applying a test to the specified attribute of each object, and rejecting the objects with the test succeeding
+- [`replace`](https://mozilla.github.io/nunjucks/templating.html#replace) - Replace one item with another
+- [`reverse`](https://mozilla.github.io/nunjucks/templating.html#reverse) - Reverse a string
+- [`round`](https://mozilla.github.io/nunjucks/templating.html#round) - Round a number
+- [`safe`](https://mozilla.github.io/nunjucks/templating.html#safe) - Mark the value as safe
+- [`select`](https://mozilla.github.io/nunjucks/templating.html#select) - Filters a sequence of objects by applying a test to each object, and only selecting the objects with the test succeeding
+- [`selectattr `](https://mozilla.github.io/nunjucks/templating.html#selectattr-only-the-single-argument-form) - Filter a sequence of objects by applying a test to the specified attribute of each object, and only selecting the objects with the test succeeding
+- [`slice`](https://mozilla.github.io/nunjucks/templating.html#slice) - Slice an iterator and return a list of lists containing those items
+- [`sort`](https://mozilla.github.io/nunjucks/templating.html#sort-arr-reverse-casesens-attr) - Sort `arr` with JavaScript's `arr.sort` function
+- [`string`](https://mozilla.github.io/nunjucks/templating.html#string) - Convert an object to a string
+- [`striptags`](https://mozilla.github.io/nunjucks/templating.html#striptags-value-preserve_linebreaks) - Strip SGML/XML tags and replace adjacent whitespace by one space
+- [`sum`](https://mozilla.github.io/nunjucks/templating.html#sum) - Output the sum of items in the array
+- [`title`](https://mozilla.github.io/nunjucks/templating.html#title) - Make the first letter of the string uppercase
+- [`trim`](https://mozilla.github.io/nunjucks/templating.html#trim) - Strip leading and trailing whitespace
+- [`truncate`](https://mozilla.github.io/nunjucks/templating.html#truncate) - Return a truncated copy of the string
+- [`upper`](https://mozilla.github.io/nunjucks/templating.html#upper) - Convert the string to upper case
+- [`urlencode`](https://mozilla.github.io/nunjucks/templating.html#urlencode) - Escape strings for use in URLs, using UTF-8 encoding
+- [`urlize`](https://mozilla.github.io/nunjucks/templating.html#urlize) - Convert URLs in plain text into clickable links
+- [`wordcount`](https://mozilla.github.io/nunjucks/templating.html#wordcount) - Count and output the number of words in a string
