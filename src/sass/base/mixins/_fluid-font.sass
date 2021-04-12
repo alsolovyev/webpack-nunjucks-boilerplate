@@ -1,0 +1,26 @@
+/**
+ * Fluid typography.
+ * Automatically calculate and update the font-size property on
+ * elements based on the dimensions of the browser viewport.
+ *
+ * @param {number} min-font-size - minimum font size
+ * @param {number} max-font-size - maximum font size
+ * @param {number} min-screen-width - minimum size of the browser viewport
+ * @param {number} max-screen-width - maximum size of the browser viewport
+ */
+@mixin fluid-font($min-font-size: 12, $max-font-size: 16, $min-screen-width: 320, $max-screen-width: 960)
+  /** Variables with units */
+  $u-max-font-size: #{$max-font-size + 'px'}
+  $u-min-font-size: #{$min-font-size + 'px'}
+  $u-max-screen-width: #{$max-screen-width + 'px'}
+  $u-min-screen-width: #{$min-screen-width + 'px'}
+
+  /** Code */
+  font-size: $u-max-font-size
+  font-size: calc(#{$u-min-font-size} + (#{$max-font-size - $min-font-size}) * ((100vw - #{$u-min-screen-width}) / (#{$max-screen-width - $min-screen-width})))
+
+  @media screen and (max-width: #{$u-min-screen-width})
+    font-size: $u-min-font-size
+
+  @media screen and (min-width: #{$u-max-screen-width})
+    font-size: $u-max-font-size

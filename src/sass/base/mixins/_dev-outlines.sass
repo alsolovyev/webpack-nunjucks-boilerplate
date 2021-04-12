@@ -1,0 +1,17 @@
+/**
+ * Show HTML elements area
+ *
+ * @param {number} width - lines thickness
+ * @param {HEX color} color - lines color
+ * @param {number} opacity - lines opacity
+ */
+@mixin dev-outlines($width: 1, $color: royalblue, $opacity: .3)
+  *
+    outline: #{$width + 'px'} dashed rgba($color, $opacity)
+    outline-offset: #{-$width + 'px'}
+    *
+      outline: #{$width + 'px'} dashed rgba($color, $opacity)
+      outline-offset: #{-$width + 'px'}
+      *
+        outline: #{$width + 'px'} dashed rgba($color, $opacity)
+        outline-offset: #{-$width + 'px'}
