@@ -3,7 +3,7 @@ const { SOURCE_DIR } = require('../helpers')
 
 
 /**
- * Transpils JavaScript files using Babel.
+ * Transpiles JavaScript files using Babel.
  * https://github.com/babel/babel-loader
  */
 const babelLoader = {
@@ -13,7 +13,7 @@ const babelLoader = {
 
 
 /**
- * Transpils TypeScript files to JavaScript.
+ * Transpiles TypeScript files into JavaScript.
  * https://github.com/TypeStrong/ts-loader
  */
 const typescriptLoader = {

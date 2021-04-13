@@ -3,9 +3,9 @@ const path = require('path')
 const { SOURCE_DIR } = require('../helpers')
 
 
-/* Get nunjucks globals */
-const getNunujucksGlobals = type => {
-  const fullPath = path.resolve(SOURCE_DIR, 'njk', 'globals', type)
+/** Gets the global nunjucks functions from the given directory */
+const getNunujucksGlobals = dir => {
+  const fullPath = path.resolve(SOURCE_DIR, 'njk', 'globals', dir)
   const data = {  }
 
   fs.readdirSync(fullPath).forEach(fileName => {
@@ -19,22 +19,25 @@ const getNunujucksGlobals = type => {
 
 
 /**
- * Loads nunjucks files.
+ * Transpiles nunjucks files into HTML files.
  * https://github.com/ogonkov/nunjucks-loader
  */
-module.exports = {
-  test: /\.(njk|nunjucks|html)$/i,
-  use: {
-    loader: 'simple-nunjucks-loader',
-    options: {
-      searchPaths: ['src/njk'],
-      assetsPaths: ['src/images'],
-      globals: {
-        ...getNunujucksGlobals('functions')
-      },
-      filters: {
-        ...getNunujucksGlobals('filters')
-      }
+const nunjucksLoader = {
+  loader: 'simple-nunjucks-loader',
+  options: {
+    searchPaths: ['src/njk'],
+    assetsPaths: ['src/images'],
+    globals: {
+      ...getNunujucksGlobals('functions')
+    },
+    filters: {
+      ...getNunujucksGlobals('filters')
     }
   }
+}
+
+
+module.exports = {
+  test: /\.(njk|nunjucks|html)$/i,
+  use: nunjucksLoader
 }
