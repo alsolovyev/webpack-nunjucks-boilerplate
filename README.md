@@ -78,7 +78,7 @@ Just create nunjucks files in `src` folder
 
 1. Import SVG icon
 ```javascript
-// src/js/lib/icons.js
+// src/js/dev/icons.js
 import '@/icons/github.svg'
 ```
 2. Use this icon in your template
