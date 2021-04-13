@@ -2,19 +2,19 @@
 
 ## Nunjucks
 - [simple-nunjucks-loader](https://github.com/ogonkov/nunjucks-loader)
-- [nunjucks](https://github.com/mozilla/nunjucks)
+  - [nunjucks](https://github.com/mozilla/nunjucks)
 
 ## JavaScript
-- [@babel/core](https://github.com/babel/babel)
-- [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
 - [babel-loader](https://github.com/babel/babel-loader)
+  - [@babel/core](https://github.com/babel/babel)
+  - [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
 
 ## TypeScript
-- [ts-loader](https://github.com/TypeStrong/ts-loader)
-- [typescript](https://github.com/microsoft/TypeScript)
-- [@babel/core](https://github.com/babel/babel)
-- [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
 - [babel-loader](https://github.com/babel/babel-loader)
+  - [@babel/core](https://github.com/babel/babel)
+  - [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+- [ts-loader](https://github.com/TypeStrong/ts-loader)
+  - [typescript](https://github.com/microsoft/TypeScript)
 
 ## CSS
 - [style-loader](https://github.com/webpack-contrib/style-loader)
@@ -23,6 +23,8 @@
 - [postcss-loader](https://github.com/webpack-contrib/postcss-loader)
   - [postcss](https://github.com/postcss/postcss)
   - [autoprefixer](https://github.com/postcss/autoprefixer)
+- [sass-loader](https://github.com/webpack-contrib/sass-loader)
+  - [sass](https://github.com/sass/sass)
 
 ## Assets
 - [asset modules](https://webpack.js.org/guides/asset-modules)

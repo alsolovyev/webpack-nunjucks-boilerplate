@@ -8,6 +8,8 @@
 
 ## Eslint
 - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin)
+  - [ESLint](https://github.com/eslint/eslint)
 
 ## Stylelint
 - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin)
+  - [StyleLint](https://github.com/stylelint/stylelint)

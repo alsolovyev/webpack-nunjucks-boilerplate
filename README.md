@@ -104,10 +104,9 @@ import '@/icons/github.svg'
 ### Webpack:
 - [webpack](https://github.com/webpack/webpack)
 - [webpack-cli](https://github.com/webpack/webpack-cli)
-- [webpack-dev-server](https://github.com/webpack/webpack-dev-server) 
+- [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 
 ### Loaders:
-
 - Nunjucks
   - [simple-nunjucks-loader](https://github.com/ogonkov/nunjucks-loader)
     - [nunjucks](https://github.com/mozilla/nunjucks)
@@ -118,11 +117,11 @@ import '@/icons/github.svg'
     - [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
 
 - TypeScript
-  - [ts-loader](https://github.com/TypeStrong/ts-loader)
-    - [typescript](https://github.com/microsoft/TypeScript)
   - [babel-loader](https://github.com/babel/babel-loader)
     - [@babel/core](https://github.com/babel/babel)
     - [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+  - [ts-loader](https://github.com/TypeStrong/ts-loader)
+    - [typescript](https://github.com/microsoft/TypeScript)
 
 - CSS
   - [style-loader](https://github.com/webpack-contrib/style-loader)
@@ -131,6 +130,8 @@ import '@/icons/github.svg'
   - [postcss-loader](https://github.com/webpack-contrib/postcss-loader)
     - [postcss](https://github.com/postcss/postcss)
     - [autoprefixer](https://github.com/postcss/autoprefixer)
+  - [sass-loader](https://github.com/webpack-contrib/sass-loader)
+    - [sass](https://github.com/sass/sass)
 
 - Assets
   - [asset modules](https://webpack.js.org/guides/asset-modules)
@@ -149,10 +150,12 @@ import '@/icons/github.svg'
 
 - Eslint
   - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin)
+    - [ESLint](https://github.com/eslint/eslint)
 
 - Stylelint
   - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin)
-  
+    - [StyleLint](https://github.com/stylelint/stylelint)
+
 <br/>
 
 
@@ -161,7 +164,7 @@ import '@/icons/github.svg'
 * **[Aleksey Solovyev](https://github.com/alsolovyev)** - [solovyev.a@icloud.com](mailto:solovyev.a@icloud.com)
 
 <br/>
-  
+
 
 
 ## 📖 License
