@@ -1,3 +1,5 @@
+import audio from '@/audio/click.mp3'
+import Cursor from './libs/Cursor'
 import greeting from './libs/greeting'
 
 
@@ -14,4 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   /** Greetings, Sire! */
   greeting({ name: 'janeRivas', email: 'solovyev.a@icloud.com' })
+
+  /** Cusrom cursor */
+  new Cursor({ audio })
 })
