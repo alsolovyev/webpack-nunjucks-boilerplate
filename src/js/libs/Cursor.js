@@ -23,6 +23,7 @@ class Cursor {
 
     // State
     this._className = className || 'cursor'
+    this._state = this._getStates()
     this._element = null
     this._position = {
       current: { x: window.innerWidth / 2, y: window.innerHeight / 2 },
@@ -35,9 +36,11 @@ class Cursor {
     // Initialization
     this._bind()
     this._create()
+    this._setState('HIDDEN')
     this._stylize(size || 10, color || 'currentColor')
     this._insert()
     this._update()
+    this._setState('DEFAULT')
     this._addEventListeners()
   }
 
@@ -45,7 +48,6 @@ class Cursor {
   /** Creates a cursor element */
   _create() {
     this._element = document.createElement('div')
-    this._element.classList.add(this._className)
   }
 
 
@@ -96,6 +98,34 @@ class Cursor {
    */
   _insert(container) {
     (container || document.body).insertAdjacentElement('beforeEnd', this._element)
+  }
+
+
+  /**
+   * Creates cursor states.
+   * @returns {Object} possible cursor states
+   */
+  _getStates() {
+    const states = Object.create(null)
+
+    states['CURRENT'] = ''
+    states['DEFAULT'] = this._className
+    states['HIDDEN'] = `${this._className} ${this._className}--is-hidden`
+    states['PRESSED'] = `${this._className} ${this._className}--is-pressed`
+
+    return states
+  }
+
+
+  /**
+   * Sets the state of the cursor.
+   * @param {String=} name - the name of the cursor state
+   */
+  _setState(name) {
+    if (name === this._state['CURRENT'] || !this._state[name]) return
+
+    this._element.className = this._state[name]
+    this._state['CURRENT'] = name
   }
 
 
@@ -209,6 +239,15 @@ class Cursor {
    */
   get status() {
     return !!this._raf
+  }
+
+
+  /**
+   * Sets the state of the cursor.
+   * @param {String} [name='DEFAULT'] - the name of the cursor state
+   */
+  set state(name) {
+    this._setState(name || 'DEFAULT')
   }
 
 
