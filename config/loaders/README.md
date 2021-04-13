@@ -1,13 +1,20 @@
 # 📘 Loaders
 
+## Nunjucks
+- [simple-nunjucks-loader](https://github.com/ogonkov/nunjucks-loader)
+- [nunjucks](https://github.com/mozilla/nunjucks)
+
 ## JavaScript
 - [@babel/core](https://github.com/babel/babel)
 - [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
 - [babel-loader](https://github.com/babel/babel-loader)
 
-## Nunjucks
-- [simple-nunjucks-loader](https://github.com/ogonkov/nunjucks-loader)
-- [nunjucks](https://github.com/mozilla/nunjucks)
+## TypeScript
+- [ts-loader](https://github.com/TypeStrong/ts-loader)
+- [typescript](https://github.com/microsoft/TypeScript)
+- [@babel/core](https://github.com/babel/babel)
+- [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
+- [babel-loader](https://github.com/babel/babel-loader)
 
 ## CSS
 - [style-loader](https://github.com/webpack-contrib/style-loader)
