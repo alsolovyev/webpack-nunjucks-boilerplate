@@ -93,6 +93,8 @@ import '@/icons/github.svg'
 
 ## 🔨 Task List
 - [x] ~~Have a cup of tea~~
+- [x] ~~Clear the terminal screen~~ ([c73fd0](https://github.com/alsolovyev/webpack-boilerplate/commit/c73fd0d4cbf53da72866ac9a326f27f9d62fbf79))
+- [ ] Add native OS notifications
 
 
 <br/>
