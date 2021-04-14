@@ -8,7 +8,7 @@
   "scripts": {
     "start": "yarn serve",
     "serve": "cross-env NODE_ENV=development webpack serve --profile --progress --config ./config/webpack.config.js",
-    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --profile --progress --config ./config/webpack.config.js",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "devDependencies": {

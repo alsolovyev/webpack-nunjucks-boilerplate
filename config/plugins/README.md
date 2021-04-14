@@ -13,3 +13,6 @@
 ## Stylelint
 - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin)
   - [StyleLint](https://github.com/stylelint/stylelint)
+
+## Terminal
+- [TerminalClearPlugin](./clearTerminal.plugin.js)
