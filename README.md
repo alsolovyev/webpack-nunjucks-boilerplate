@@ -156,6 +156,9 @@ import '@/icons/github.svg'
   - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin)
     - [StyleLint](https://github.com/stylelint/stylelint)
 
+- Terminal
+  - [TerminalClearPlugin](./config/plugins/clearTerminal.plugin.js)
+
 <br/>
 
 
