@@ -1,7 +1,7 @@
 {
   "name": "webpack-nunjucks-boilerplate",
   "description": "Webpack + Nunjucks boilerplate for static websites that has all the necessary modern tools and optimizations built-in",
-  "repository": "git@github.com:alsolovyev/webpack-boilerplate.git",
+  "repository": "git@github.com:alsolovyev/webpack-nunjucks-boilerplate.git",
   "author": "janeRivas <solovyev.a@icloud.com> (https://github.com/alsolovyev)",
   "version": "1.0.0",
   "license": "MIT",
