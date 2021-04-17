@@ -149,6 +149,9 @@ import '@/icons/github.svg'
 - HTML
   - [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
 
+- TypeScript
+  - [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
+
 - CSS
   - [MiniCssExtractPlugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
 

@@ -19,6 +19,7 @@ const babelLoader = {
 const typescriptLoader = {
   loader: 'ts-loader',
   options: {
+    transpileOnly: true,
     context: SOURCE_DIR,
     configFile: path.resolve(process.cwd(), 'config', 'tsconfig.json')
   }

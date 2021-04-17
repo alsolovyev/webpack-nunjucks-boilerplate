@@ -3,6 +3,7 @@ const htmlPlugin = require('../plugins/html.plugin.js')
 const eslintPlugin = require('../plugins/eslint.plugin.js')
 const stylelintPlugin = require('../plugins/stylelint.plugin.js')
 const clearTerminal = require('../plugins/clearTerminal.plugin.js')
+const forkTSChecker = require('../plugins/forkTSChecker.plugin.js')
 const javascriptLoader = require('../loaders/javascript.loader.js')
 const typescriptLoader = require('../loaders/typescript.loader.js')
 const nunjucksLoader = require('../loaders/nunjucks.loader.js')
@@ -25,6 +26,7 @@ module.exports = {
   plugins: [
     clearTerminal,
     ...htmlPlugin,
+    forkTSChecker,
     eslintPlugin,
     stylelintPlugin
   ],
