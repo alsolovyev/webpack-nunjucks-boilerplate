@@ -144,6 +144,9 @@ import '@/icons/github.svg'
   - [svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)
   - [svgo-loader](https://github.com/svg/svgo-loader)
 
+- Optimization
+  - [thread-loader](https://github.com/webpack-contrib/thread-loader)
+
 ### Plugins:
 
 - HTML
