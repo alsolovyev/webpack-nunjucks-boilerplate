@@ -25,5 +25,14 @@ module.exports = {
     'indent': ['error', 2, { 'SwitchCase': 1 }],
     'no-console': IS_DEV_MODE ? 'warn' : 'error',
     'no-unexpected-multiline': 'off'
-  }
+  },
+  overrides: [
+    {
+      files: ['*.ts'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {  },
+      extends: ['plugin:@typescript-eslint/recommended'],
+      // rules: {  }
+    }
+  ]
 }

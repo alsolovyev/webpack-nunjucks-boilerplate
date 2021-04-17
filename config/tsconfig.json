@@ -1,15 +1,23 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
     "allowJs": true,
     "checkJs": false,
-    "target": "es5",
-    "module": "es2015",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "lib": ["dom"]
   },
-  "include": ["js/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": ["../src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
