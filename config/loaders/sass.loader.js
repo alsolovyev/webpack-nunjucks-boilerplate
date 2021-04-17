@@ -1,4 +1,14 @@
 const { IS_DEV_MODE } = require('../constants')
+const createThreadLoader = require('../utils/createThreadLoader')
+
+
+/**
+ * Runs the following loaders in a worker pool.
+ * https://github.com/webpack-contrib/thread-loader.
+ */
+const threadLoader = createThreadLoader({
+  name: 'Sass Pool'
+})
 
 
 /**
@@ -61,6 +71,7 @@ module.exports = {
   test: /\.s[ac]ss$/i,
   use: [
     IS_DEV_MODE ? styleLoader : miniCssExtractLoader,
+    threadLoader,
     cssLoader,
     !IS_DEV_MODE && postcssLoader,
     sassLoader

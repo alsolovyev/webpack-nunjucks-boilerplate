@@ -1,21 +1,14 @@
-const fs = require('fs')
-const path = require('path')
-const { SOURCE_DIR } = require('../constants')
+const createThreadLoader = require('../utils/createThreadLoader')
+const getNunjucksGlobals = require('../utils/getNunjucksGlobals')
 
 
-/** Gets the global nunjucks functions from the given directory */
-const getNunujucksGlobals = dir => {
-  const fullPath = path.resolve(SOURCE_DIR, 'njk', 'globals', dir)
-  const data = {  }
-
-  fs.readdirSync(fullPath).forEach(fileName => {
-    if (!/\.js$/i.test(fileName)) return false
-
-    data[fileName.split('.')[0]] = path.join(fullPath, fileName)
-  })
-
-  return data
-}
+/**
+ * Runs the following loaders in a worker pool.
+ * https://github.com/webpack-contrib/thread-loader.
+ */
+const threadLoader = createThreadLoader({
+  name: 'Njk Pool'
+})
 
 
 /**
@@ -28,10 +21,10 @@ const nunjucksLoader = {
     searchPaths: ['src/njk'],
     assetsPaths: ['src/images'],
     globals: {
-      ...getNunujucksGlobals('functions')
+      ...getNunjucksGlobals('functions')
     },
     filters: {
-      ...getNunujucksGlobals('filters')
+      ...getNunjucksGlobals('filters')
     }
   }
 }
@@ -39,5 +32,8 @@ const nunjucksLoader = {
 
 module.exports = {
   test: /\.(njk|nunjucks|html)$/i,
-  use: nunjucksLoader
+  use: [
+    threadLoader,
+    nunjucksLoader
+  ]
 }

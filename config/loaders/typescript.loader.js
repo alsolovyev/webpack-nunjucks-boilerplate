@@ -1,5 +1,15 @@
 const path = require('path')
 const { SOURCE_DIR } = require('../constants')
+const createThreadLoader = require('../utils/createThreadLoader')
+
+
+/**
+ * Runs the following loaders in a worker pool.
+ * https://github.com/webpack-contrib/thread-loader.
+ */
+const threadLoader = createThreadLoader({
+  name: 'TS Pool'
+})
 
 
 /**
@@ -19,6 +29,8 @@ const babelLoader = {
 const typescriptLoader = {
   loader: 'ts-loader',
   options: {
+    transpileOnly: true,
+    happyPackMode: true,
     context: SOURCE_DIR,
     configFile: path.resolve(process.cwd(), 'config', 'tsconfig.json')
   }
@@ -29,6 +41,7 @@ module.exports = {
   test: /\.ts(x?)$/i,
   exclude: /node_modules/,
   use: [
+    threadLoader,
     babelLoader,
     typescriptLoader
   ]

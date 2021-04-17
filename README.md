@@ -144,10 +144,16 @@ import '@/icons/github.svg'
   - [svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)
   - [svgo-loader](https://github.com/svg/svgo-loader)
 
+- Optimization
+  - [thread-loader](https://github.com/webpack-contrib/thread-loader)
+
 ### Plugins:
 
 - HTML
   - [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
+
+- TypeScript
+  - [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
 
 - CSS
   - [MiniCssExtractPlugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
