@@ -13,6 +13,7 @@ module.exports = {
     publicPath: PUBLIC_PATH,
     path: OUTPUT_DIR,
     filename: ({ chunk: { name } }) => `js/${ name === 'common' ? 'app' : name }.[fullhash:8].js`,
+    assetModuleFilename: '[path][name][hash:8][ext]',
     clean: true
   },
   stats: {
