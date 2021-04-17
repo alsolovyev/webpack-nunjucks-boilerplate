@@ -1,4 +1,4 @@
-const { IS_DEV_MODE } = require('../helpers')
+const { IS_DEV_MODE } = require('../constants')
 
 
 /**

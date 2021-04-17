@@ -1,6 +1,6 @@
 const fs = require('fs')
 const path = require('path')
-const { SOURCE_DIR } = require('../helpers')
+const { SOURCE_DIR } = require('../constants')
 
 
 /** Gets the global nunjucks functions from the given directory */

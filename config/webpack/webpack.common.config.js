@@ -1,4 +1,4 @@
-const { SOURCE_DIR } = require('../helpers')
+const { SOURCE_DIR } = require('../constants')
 const htmlPlugin = require('../plugins/html.plugin.js')
 const eslintPlugin = require('../plugins/eslint.plugin.js')
 const stylelintPlugin = require('../plugins/stylelint.plugin.js')

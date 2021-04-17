@@ -1,5 +1,5 @@
 const path = require('path')
-const { SOURCE_DIR } = require('../helpers')
+const { SOURCE_DIR } = require('../constants')
 
 
 /**

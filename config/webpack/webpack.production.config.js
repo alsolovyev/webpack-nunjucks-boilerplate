@@ -1,4 +1,4 @@
-const { OUTPUT_DIR, PUBLIC_PATH } = require('../helpers')
+const { OUTPUT_DIR, PUBLIC_PATH } = require('../constants')
 const sassLoader = require('../loaders/sass.loader.js')
 const assetLoader = require('../loaders/asset.loader.js')
 const cssExtractPlugin = require('../plugins/cssExtract.plugin.js')
