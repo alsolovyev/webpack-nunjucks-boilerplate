@@ -94,6 +94,8 @@ import '@/icons/github.svg'
 ## 🔨 Task List
 - [x] ~~Have a cup of tea~~
 - [x] ~~Clear the terminal screen~~ ([c73fd0](https://github.com/alsolovyev/webpack-boilerplate/commit/c73fd0d4cbf53da72866ac9a326f27f9d62fbf79))
+- [x] ~~Enable ESLint for TypeScript files~~ ([c27e7b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/c27e7be368fedff85817efc422e5ffe7233eda39))
+- [ ] Run loaders in a worker pools
 - [ ] Add native OS notifications
 
 
