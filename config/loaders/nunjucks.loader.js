@@ -1,7 +1,5 @@
-const fs = require('fs')
-const path = require('path')
-const { SOURCE_DIR } = require('../constants')
 const createThreadLoader = require('../utils/createThreadLoader')
+const getNunjucksGlobals = require('../utils/getNunjucksGlobals')
 
 
 /**
@@ -11,21 +9,6 @@ const createThreadLoader = require('../utils/createThreadLoader')
 const threadLoader = createThreadLoader({
   name: 'Njk Pool'
 })
-
-
-/** Gets the global nunjucks functions from the given directory */
-const getNunujucksGlobals = dir => {
-  const fullPath = path.resolve(SOURCE_DIR, 'njk', 'globals', dir)
-  const data = {  }
-
-  fs.readdirSync(fullPath).forEach(fileName => {
-    if (!/\.js$/i.test(fileName)) return false
-
-    data[fileName.split('.')[0]] = path.join(fullPath, fileName)
-  })
-
-  return data
-}
 
 
 /**
@@ -38,10 +21,10 @@ const nunjucksLoader = {
     searchPaths: ['src/njk'],
     assetsPaths: ['src/images'],
     globals: {
-      ...getNunujucksGlobals('functions')
+      ...getNunjucksGlobals('functions')
     },
     filters: {
-      ...getNunujucksGlobals('filters')
+      ...getNunjucksGlobals('filters')
     }
   }
 }
