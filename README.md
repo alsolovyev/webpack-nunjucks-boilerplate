@@ -94,6 +94,44 @@ import '@/icons/github.svg'
 {{ icon('github') | safe }}
 ```
 
+### Environment variables
+
+#### `NODE_ENV`
+
+> Type: `'development' | 'production' | none` <br/>
+> Default: `'development'`
+
+Indicates the current mode.
+
+#### `OUTPUT_DIR`
+
+> Type: `string` <br/>
+> Default: `'dist'`
+
+Indicates the directory where the production build files will be generated.
+
+#### `PUBLIC_PATH`
+
+> Type: `string` <br/>
+> Default: `'/'`
+
+Indicates the base URL your project bundle will be deployed at.
+
+#### `SOURCE_DIR`
+
+> Type: `string` <br/>
+> Default: `'src'`
+
+Indicates the directory where the source files are located.
+
+#### `TS_SUPPORT`
+
+> Type: `'true' | 'false' | none` <br/>
+> Default: `none`
+
+Indicates whether TypeScript support should be enabled. <br/>
+*`none` is equal to `false`*
+
 <br/>
 
 
