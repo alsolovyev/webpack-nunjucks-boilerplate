@@ -11,9 +11,9 @@ Webpack + Nunjucks boilerplate for static websites that has all the necessary mo
 
 ## ⚗️ Features
 - [Webpack](https://webpack.js.org)
-- [Nunjucks (supports multiple pages)](https://mozilla.github.io/nunjucks)
+- [Nunjucks](https://mozilla.github.io/nunjucks) (supports multiple pages)
 - [Babel](https://babeljs.io)
-- [TypeScript](https://www.typescriptlang.org)
+- [TypeScript](https://typescriptlang.org) (disabled by default)
 - [ESLint](https://eslint.org)
 - [Sass](https://sass-lang.com)
 - [PostCSS](https://postcss.org)
@@ -60,7 +60,14 @@ yarn deploy
 
 
 
-## 📘 Helpers
+## 📘 Documentation
+
+### TypeScript Support
+
+By default, TypeScript support is disabled. To enable it, set the `TS_SUPPORT` environment variable to `true` in `package.json`.
+```bash
+... TS_SUPPORT=true ...
+```
 
 ### Multiple pages
 
@@ -86,6 +93,44 @@ import '@/icons/github.svg'
 // *.njk
 {{ icon('github') | safe }}
 ```
+
+### Environment variables
+
+#### `NODE_ENV`
+
+> Type: `'development' | 'production' | none` <br/>
+> Default: `'development'`
+
+Indicates the current mode.
+
+#### `OUTPUT_DIR`
+
+> Type: `string` <br/>
+> Default: `'dist'`
+
+Indicates the directory where the production build files will be generated.
+
+#### `PUBLIC_PATH`
+
+> Type: `string` <br/>
+> Default: `'/'`
+
+Indicates the base URL your project bundle will be deployed at.
+
+#### `SOURCE_DIR`
+
+> Type: `string` <br/>
+> Default: `'src'`
+
+Indicates the directory where the source files are located.
+
+#### `TS_SUPPORT`
+
+> Type: `'true' | 'false' | none` <br/>
+> Default: `none`
+
+Indicates whether TypeScript support should be enabled. <br/>
+*`none` is equal to `false`*
 
 <br/>
 
