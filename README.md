@@ -142,6 +142,7 @@ Indicates whether TypeScript support should be enabled. <br/>
 - [x] ~~Enable ESLint for TypeScript files~~ ([c27e7b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/c27e7be368fedff85817efc422e5ffe7233eda39))
 - [x] ~~Run loaders in a worker pools~~ ([534c0b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/534c0bd62b5727504e6036999a23609c4e03a186))
 - [x] ~~Run TypeScript type checker on a separate process~~ ([534c0b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/534c0bd62b5727504e6036999a23609c4e03a186))
+- [x] ~~Disable TypeScript support by default~~ ([e7c659](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/pull/11/commits/e7c65978384f4becb5836d5d99892d5f377fc9b2))
 - [ ] Add native OS notifications
 
 
