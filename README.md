@@ -140,7 +140,8 @@ Indicates whether TypeScript support should be enabled. <br/>
 - [x] ~~Have a cup of tea~~
 - [x] ~~Clear the terminal screen~~ ([c73fd0](https://github.com/alsolovyev/webpack-boilerplate/commit/c73fd0d4cbf53da72866ac9a326f27f9d62fbf79))
 - [x] ~~Enable ESLint for TypeScript files~~ ([c27e7b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/c27e7be368fedff85817efc422e5ffe7233eda39))
-- [ ] Run loaders in a worker pools
+- [x] ~~Run loaders in a worker pools~~ ([534c0b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/534c0bd62b5727504e6036999a23609c4e03a186))
+- [x] ~~Run TypeScript type checker on a separate process~~ ([534c0b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/534c0bd62b5727504e6036999a23609c4e03a186))
 - [ ] Add native OS notifications
 
 
