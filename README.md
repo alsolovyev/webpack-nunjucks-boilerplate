@@ -11,7 +11,7 @@ Webpack + Nunjucks boilerplate for static websites that has all the necessary mo
 
 ## ⚗️ Features
 - [Webpack](https://webpack.js.org)
-- [Nunjucks (supports multiple pages)](https://mozilla.github.io/nunjucks)
+- [Nunjucks](https://mozilla.github.io/nunjucks) (supports multiple pages)
 - [Babel](https://babeljs.io)
 - [TypeScript](https://typescriptlang.org) (disabled by default)
 - [ESLint](https://eslint.org)
@@ -60,7 +60,7 @@ yarn deploy
 
 
 
-## 📘 Helpers
+## 📘 Documentation
 
 ### TypeScript Support
 
