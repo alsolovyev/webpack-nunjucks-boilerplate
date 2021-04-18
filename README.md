@@ -13,7 +13,7 @@ Webpack + Nunjucks boilerplate for static websites that has all the necessary mo
 - [Webpack](https://webpack.js.org)
 - [Nunjucks (supports multiple pages)](https://mozilla.github.io/nunjucks)
 - [Babel](https://babeljs.io)
-- [TypeScript](https://www.typescriptlang.org)
+- [TypeScript](https://typescriptlang.org) (disabled by default)
 - [ESLint](https://eslint.org)
 - [Sass](https://sass-lang.com)
 - [PostCSS](https://postcss.org)
@@ -61,6 +61,13 @@ yarn deploy
 
 
 ## 📘 Helpers
+
+### TypeScript Support
+
+By default, TypeScript support is disabled. To enable it, set the `TS_SUPPORT` environment variable to `true` in `package.json`.
+```bash
+... TS_SUPPORT=true ...
+```
 
 ### Multiple pages
 
