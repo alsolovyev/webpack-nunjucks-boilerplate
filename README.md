@@ -218,7 +218,7 @@ Indicates whether TypeScript support should be enabled. <br/>
     - [StyleLint](https://github.com/stylelint/stylelint)
 
 - Terminal
-  - [TerminalClearPlugin](./config/plugins/clearTerminal.plugin.js)
+  - [TerminalClearPlugin(internal)](./config/modules/terminal-clear-plugin/index.js)
 
 <br/>
 

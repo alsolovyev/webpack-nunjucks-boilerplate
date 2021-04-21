@@ -14,8 +14,9 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
-    before: (app, server) => chokidar.watch('./src/**/*.njk').on('change', () =>
-      server.sockWrite(server.sockets, 'content-changed')),
+    before: (app, server) => chokidar.watch('./src/**/*.njk').on('change', () => {
+      server.sockWrite(server.sockets, 'content-changed')
+    }),
     watchOptions: {
       ignored: ['node_modules/**']
     }
