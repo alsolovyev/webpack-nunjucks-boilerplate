@@ -1,6 +1,5 @@
 const path = require('path')
 const { Environment, FileSystemLoader } = require('nunjucks')
-const { SOURCE_DIR } = require('../../constants')
 
 
 /**
@@ -21,7 +20,7 @@ module.exports = function(source) {
   const { context, templates } = this.getOptions()
 
   const env = new Environment(
-    new FileSystemLoader(path.resolve(SOURCE_DIR, templates)),
+    new FileSystemLoader(path.resolve(this.rootContext, templates)),
     {
       autoescape: true
     }
