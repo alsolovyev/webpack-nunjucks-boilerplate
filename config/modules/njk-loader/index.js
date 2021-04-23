@@ -1,5 +1,6 @@
 const path = require('path')
 const { Environment, FileSystemLoader } = require('nunjucks')
+const schema = require('./schema')
 
 
 /**
@@ -17,7 +18,7 @@ const { Environment, FileSystemLoader } = require('nunjucks')
  */
 module.exports = function(source) {
   const callback = this.async()
-  const { context, templates } = this.getOptions()
+  const { context, templates } = this.getOptions(schema)
 
   const env = new Environment(
     new FileSystemLoader(path.resolve(this.rootContext, templates)),
