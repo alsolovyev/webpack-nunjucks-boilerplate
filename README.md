@@ -146,6 +146,7 @@ Indicates whether TypeScript support should be enabled. <br/>
 - [x] ~~Replace simple-nunjucks-loader with custom loader~~ ([b05607](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/b056076a4a1b0cdea73ccdf6ae34fc1c0f3a98e6))
 - [x] ~~Add nunjucks functions and filters~~ ([90e877](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/90e87775719b0a47d71d0f135528c0465623134e))
 - [ ] Optimize [njk-loader](./config/modules/njk-loader/index.js) code
+- [ ] Enable caching
 - [ ] Add native OS notifications
 
 
