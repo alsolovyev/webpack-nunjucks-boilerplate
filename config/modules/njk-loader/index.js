@@ -1,5 +1,6 @@
 const path = require('path')
 const { Environment, FileSystemLoader } = require('nunjucks')
+const log = require('webpack-log')({ name: 'nunjucks' })
 const schema = require('./schema')
 const iconFn = require('./functions/icon')
 
@@ -11,7 +12,6 @@ const iconFn = require('./functions/icon')
  * @requires nunjucks
  * @requires html-loader
  *
- * @todo Handle errors
  * @todo Hide common code (njk config)
  *
  * @param {String} source - the contents of the raw resource
@@ -33,8 +33,21 @@ module.exports = function(source) {
   // Add a global value that will be available to all templates.
   env.addGlobal('icon', iconFn)
 
+  // Transpile
   env.renderString(source, context, (error, HTMLString) => {
-    callback(error ? error : null, HTMLString)
+    if (error) {
+      const [ location, description ] = error.message.split('\n ')
+      /**
+       * Do not emit an error to prevent the "HTML Webpack"
+       * plugin from outputting useless text to the terminal.
+       */
+      callback(null, `<pre style='font-size:30px'>${ error.message }</pre>`)
+      process.stdout.write('\n')
+      log.error(description)
+      log.error(location)
+    } else {
+      callback(null, HTMLString)
+    }
   })
 
   return
