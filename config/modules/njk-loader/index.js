@@ -19,7 +19,7 @@ const iconFn = require('./functions/icon')
  */
 module.exports = function(source) {
   const callback = this.async()
-  const { context, templates } = this.getOptions(schema)
+  const { autoescape, context, templates } = this.getOptions(schema)
 
   const env = new Environment(
     new FileSystemLoader(path.resolve(this.rootContext, templates || '')),
