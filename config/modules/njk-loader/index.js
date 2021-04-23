@@ -27,9 +27,8 @@ module.exports = function(source) {
       autoescape: autoescape || true
     }
   )
-  env.on('load', (name, source, loader) => {
-    this.addDependency(source.path)
-  })
+  // Add a file as dependency of the loader result in order to make them watchable.
+  env.on('load', (name, source) => this.addDependency(source.path))
 
   // Add a global value that will be available to all templates.
   env.addGlobal('icon', iconFn)
