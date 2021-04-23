@@ -21,9 +21,9 @@ module.exports = function(source) {
   const { context, templates } = this.getOptions(schema)
 
   const env = new Environment(
-    new FileSystemLoader(path.resolve(this.rootContext, templates)),
+    new FileSystemLoader(path.resolve(this.rootContext, templates || '')),
     {
-      autoescape: true
+      autoescape: autoescape || true
     }
   )
   env.on('load', (name, source, loader) => {

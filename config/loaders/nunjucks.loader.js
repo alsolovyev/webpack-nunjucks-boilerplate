@@ -29,7 +29,8 @@ const htmlLoader = {
 const nunjucksLoader = {
   loader: path.resolve('./config/modules/njk-loader'),
   options: {
-    context: require(path.resolve(SOURCE_DIR, 'data', 'nunjucks.data.js')),
+    autoescape: false,
+    context: path.resolve(SOURCE_DIR, 'data/nunjucks.data.js'),
     templates: 'njk'
   }
 }
