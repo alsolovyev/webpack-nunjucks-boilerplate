@@ -22,4 +22,4 @@
   - [StyleLint](https://github.com/stylelint/stylelint)
 
 ## Terminal
-- [TerminalClearPlugin](./clearTerminal.plugin.js)
+- [TerminalClearPlugin(internal)](../modules/terminal-clear-plugin/index.js)

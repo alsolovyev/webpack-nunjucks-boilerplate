@@ -1,0 +1,19 @@
+{
+  "title": "Nunjucks loader options",
+  "type": "object",
+  "properties": {
+    "autoescape": {
+      "type": "boolean",
+      "default": "true"
+    },
+    "context": {
+      "type": "string"
+    },
+    "templates": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "required": [  ],
+  "additionalProperties": false
+}

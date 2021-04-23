@@ -140,9 +140,12 @@ Indicates whether TypeScript support should be enabled. <br/>
 - [x] ~~Have a cup of tea~~
 - [x] ~~Clear the terminal screen~~ ([c73fd0](https://github.com/alsolovyev/webpack-boilerplate/commit/c73fd0d4cbf53da72866ac9a326f27f9d62fbf79))
 - [x] ~~Enable ESLint for TypeScript files~~ ([c27e7b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/c27e7be368fedff85817efc422e5ffe7233eda39))
-- [x] ~~Run loaders in a worker pools~~ ([534c0b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/534c0bd62b5727504e6036999a23609c4e03a186))
+- [x] ~~Run loaders in a worker pools~~ ([daee75](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/daee7574bc65152b06cdeb579e64a9d4fe75c0e1))
 - [x] ~~Run TypeScript type checker on a separate process~~ ([534c0b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/534c0bd62b5727504e6036999a23609c4e03a186))
-- [x] ~~Disable TypeScript support by default~~ ([e7c659](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/pull/11/commits/e7c65978384f4becb5836d5d99892d5f377fc9b2))
+- [x] ~~Disable TypeScript support by default~~ ([e7c659](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/e7c65978384f4becb5836d5d99892d5f377fc9b2))
+- [x] ~~Replace simple-nunjucks-loader with custom loader~~ ([b05607](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/b056076a4a1b0cdea73ccdf6ae34fc1c0f3a98e6))
+- [ ] Add nunjucks functions and filters
+- [ ] Optimize [njk-loader](./config/modules/njk-loader/index.js) code
 - [ ] Add native OS notifications
 
 
@@ -159,7 +162,8 @@ Indicates whether TypeScript support should be enabled. <br/>
 
 ### Loaders:
 - Nunjucks
-  - [simple-nunjucks-loader](https://github.com/ogonkov/nunjucks-loader)
+  - [html-loader](https://github.com/webpack-contrib/html-loader)
+  - [njk-loader(internal)](./config/modules/njk-loader/index.js)
     - [nunjucks](https://github.com/mozilla/nunjucks)
 
 - JavaScript
@@ -218,7 +222,7 @@ Indicates whether TypeScript support should be enabled. <br/>
     - [StyleLint](https://github.com/stylelint/stylelint)
 
 - Terminal
-  - [TerminalClearPlugin](./config/plugins/clearTerminal.plugin.js)
+  - [TerminalClearPlugin(internal)](./config/modules/terminal-clear-plugin/index.js)
 
 <br/>
 

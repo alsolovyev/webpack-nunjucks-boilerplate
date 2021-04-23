@@ -1,7 +1,8 @@
 # 📘 Loaders
 
 ## Nunjucks
-- [simple-nunjucks-loader](https://github.com/ogonkov/nunjucks-loader)
+- [html-loader](https://github.com/webpack-contrib/html-loader)
+- [njk-loader(internal)](../modules/njk-loader/index.js)
   - [nunjucks](https://github.com/mozilla/nunjucks)
 
 ## JavaScript

@@ -10,4 +10,4 @@
  *  2. Use it in nunjucks template (template.njk)
  *    <div>{{ icon('heart') | safe }}</div>
  */
-module.exports = name => `<svg><use xlink:href="#${name}"></use></svg>`
+module.exports = name => `<svg class='icon'><use xlink:href="#${name}"></use></svg>`
