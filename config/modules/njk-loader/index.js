@@ -3,7 +3,7 @@ const { Environment, FileSystemLoader } = require('nunjucks')
 
 
 /**
- * Transpiles nunjucks files into HTML files.
+ * Transpiles nunjucks files into a string.
  * https://webpack.js.org/contribute/writing-a-loader
  *
  * @requires nunjucks
