@@ -67,7 +67,7 @@ class Cursor {
       margin: -${ size / 2 }px 0 0 -${ size / 2 }px;
       border-radius: 50%;
       background: ${ color };
-      poiner-event: none;
+      pointer-events: none;
       user-select: none;
       -webkit-user-select: none;
          -moz-user-select: none;
