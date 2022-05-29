@@ -1,4 +1,5 @@
 module.exports = {
+  "customSyntax": "postcss-sass",
   "rules": {
     "at-rule-no-unknown": true,
     "block-no-empty": true,
@@ -13,7 +14,6 @@ module.exports = {
     "declaration-block-no-shorthand-property-overrides": true,
     "font-family-no-duplicate-names": true,
     "font-family-no-missing-generic-family-keyword": [ true, { "severity": "warning" }],
-    "function-calc-no-invalid": true,
     "function-calc-no-unspaced-operator": true,
     "function-linear-gradient-no-nonstandard-direction": true,
     "keyframe-declaration-no-important": true,

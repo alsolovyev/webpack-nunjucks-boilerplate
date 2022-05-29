@@ -1,4 +1,3 @@
-const chokidar = require('chokidar')
 const sassLoader = require('../loaders/sass.loader.js')
 const assetLoader = require('../loaders/asset.loader.js')
 
@@ -12,14 +11,13 @@ module.exports = {
     host: '0.0.0.0',
     port: process.env.PORT || 8080,
     hot: true,
-    compress: true,
+    compress: false,
+    liveReload: true, // ToDo: disable liveReload for HTML files
     historyApiFallback: true,
-    before: (app, server) => chokidar.watch('./src/**/*.njk').on('change', () => {
-      server.sockWrite(server.sockets, 'content-changed')
-    }),
-    watchOptions: {
-      ignored: ['node_modules/**']
-    }
+    watchFiles: ['./src/**/*.njk']
+  },
+  watchOptions: {
+    ignored: ['**/node_modules', '**/config']
   },
   stats: {
     errors: true,
