@@ -20,6 +20,7 @@ const iconFn = require('./functions/icon')
 module.exports = function(source) {
   const callback = this.async()
   const { autoescape, context, templates } = this.getOptions(schema)
+  const contextData = require(context)
 
   const env = new Environment(
     new FileSystemLoader(path.resolve(this.rootContext, templates || '')),
@@ -34,7 +35,7 @@ module.exports = function(source) {
   env.addGlobal('icon', iconFn)
 
   // Transpile
-  env.renderString(source, context, (error, HTMLString) => {
+  env.renderString(source, contextData, (error, HTMLString) => {
     if (error) {
       const [ location, description ] = error.message.split('\n ')
       /**

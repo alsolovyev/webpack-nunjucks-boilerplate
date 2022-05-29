@@ -71,7 +71,8 @@ module.exports = {
   test: /\.s[ac]ss$/i,
   use: [
     IS_DEV_MODE ? styleLoader : miniCssExtractLoader,
-    threadLoader,
+    // Thread loader cannot be used due to this issue:
+    // - https://github.com/webpack-contrib/thread-loader/issues/135
     cssLoader,
     !IS_DEV_MODE && postcssLoader,
     sassLoader
