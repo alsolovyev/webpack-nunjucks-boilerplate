@@ -3,10 +3,14 @@
 
 Webpack + Nunjucks boilerplate for static websites that has all the necessary modern tools and optimizations built-in.
 
+> ⚠️ If you're using NodeJS 17 or higher then to avoid the **ERR_OSSL_EVP_UNSUPPORTED** error you need to enable openssl legacy provider `export NODE_OPTIONS=--openssl-legacy-provider` or use NodeJS 16 or lower. 
+> This issue will be fixed soon... 🛠
+
+<br />
+
 ![Webpack Boilerplate](https://habrastorage.org/webt/iy/mr/2a/iymr2asueudrawkzepthfai6qvy.jpeg)
 
 <br/>
-
 
 
 ## ⚗️ Features
