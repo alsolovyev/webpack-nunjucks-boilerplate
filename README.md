@@ -146,7 +146,7 @@ Indicates whether TypeScript support should be enabled. <br/>
 - [x] ~~Disable TypeScript support by default~~ ([e7c659](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/e7c65978384f4becb5836d5d99892d5f377fc9b2))
 - [x] ~~Replace simple-nunjucks-loader with custom loader~~ ([b05607](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/b056076a4a1b0cdea73ccdf6ae34fc1c0f3a98e6))
 - [x] ~~Add nunjucks functions and filters~~ ([90e877](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/90e87775719b0a47d71d0f135528c0465623134e))
-- [ ] Fix ERR_OSSL_EVP_UNSUPPORTED error
+- [x] ~~Fix ERR_OSSL_EVP_UNSUPPORTED error~~ ([8fd0c5](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/8fd0c58e7acb6431bd58d68f525e87a8edf56da4))
 - [ ] Optimize [njk-loader](./config/modules/njk-loader/index.js) code
 - [ ] Enable caching
 - [ ] Add native OS notifications
