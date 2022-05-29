@@ -222,6 +222,7 @@ Indicates whether TypeScript support should be enabled. <br/>
 
 - Stylelint
   - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin)
+    - [postcss-sass](https://github.com/AleshaOleg/postcss-sass)
     - [StyleLint](https://github.com/stylelint/stylelint)
 
 - Terminal
