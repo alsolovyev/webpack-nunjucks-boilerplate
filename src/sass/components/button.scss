@@ -1,5 +1,17 @@
+$color-button: rgba(27, 117, 187, 1);
+
 .button{
-    background-color: aqua;
-    color: antiquewhite;
-    padding: 10px 15px;
+    font-family: 'Gelasio';
+    padding: 15px 30px;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: $color-button;
+    border-radius: 6px;
+    background-color:$color-button;
+    transition: 0.2s;
+  
 }
