@@ -1,0 +1,28 @@
+/**
+ * Common styles
+ */
+ $black:black;
+ $white:white;
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body{
+  background: $black;
+  color: $white;
+  font: 400 1.3rem/1.4 'Hello', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1{
+  font-weight: inherit;
+  @include fluid-font(14, 20, 320, 960);
+}

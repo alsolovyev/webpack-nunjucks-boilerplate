@@ -10,7 +10,7 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: {
     host: '0.0.0.0',
-    port: process.env.PORT || 8080,
+    port: 8080,
     hot: true,
     compress: true,
     historyApiFallback: true,
