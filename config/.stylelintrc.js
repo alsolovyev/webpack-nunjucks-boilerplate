@@ -27,5 +27,15 @@ module.exports = {
     "selector-pseudo-element-no-unknown": true,
     "string-no-newline": true,
     "unit-no-unknown": true
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["**/*.sass"],
+      "customSyntax": "postcss-sass"
+    }
+  ]
 }

@@ -20,6 +20,7 @@
 ## Stylelint
 - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin)
   - [postcss-sass](https://github.com/AleshaOleg/postcss-sass)
+  - [postcss-scss](https://github.com/postcss/postcss-scss)
   - [StyleLint](https://github.com/stylelint/stylelint)
 
 ## Terminal
