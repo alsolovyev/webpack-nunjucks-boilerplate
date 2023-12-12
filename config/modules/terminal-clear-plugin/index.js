@@ -1,30 +1,51 @@
 /**
- * Class representing a webpack plugin for clearing the terminal screen.
+ * Represents a webpack plugin for clearing the terminal before each build or watch run.
  *
  * @requires webpack version >=4
- * @version 1.0.0
+ * @version 2.0.0
  * @author janeRivas <solovyev.a@icloud.com>
  * @license MIT
  */
 class TerminalClearPlugin {
   /**
-   * @param {Boolean} [saveHistory=true] - indicates whether to keep the terminal history or not
+   * Creates an instance of TerminalClearPlugin.
+   * @constructor
+   * @param {Object} options - Plugin options.
    */
-  constructor({ saveHistory = true } = {  }) {
-    this.saveHistory = saveHistory
+  constructor(options = {}) {
+    this._options = options
+
+    this._bind()
   }
 
   /**
-   * Installs the plugin.
-   * https://webpack.js.org/contribute/writing-a-plugin/#basic-plugin-architecture
+   * Applies the plugin to the webpack compiler.
+   * Registers the _clear method to be executed before each run in both 'beforeRun' and 'watchRun' hooks.
+   *
+   * @param {Object} compiler - The webpack compiler instance.
    */
   apply(compiler) {
-    compiler.hooks.beforeCompile.tapAsync('TerminalClearPlugin', (params, callback) => {
-      process.stdout.write(this.saveHistory ? '\x1B[H\x1B[2J' : '\x1B[2J\x1B[3J\x1B[H\x1Bc')
-      callback()
-    })
+    compiler.hooks.beforeRun.tap('TerminalClearPlugin', this._clear)
+    compiler.hooks.watchRun.tap('TerminalClearPlugin', this._clear)
+  }
+
+  /**
+   * Binds the _clear method to the current instance.
+   *
+   * @private
+   */
+  _bind() {
+    this._clear = this._clear.bind(this)
+  }
+
+  /**
+   * Clears the terminal.
+   *
+   * @private
+   */
+  _clear() {
+    process.stdout.write('\x1Bc')
   }
 }
-
 
 module.exports = TerminalClearPlugin
