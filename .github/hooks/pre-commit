@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+color_off="\033[0m"
+color_error="\033[0;31m"
+
+branch_name=$(git rev-parse --abbrev-ref HEAD)
+unavailable_names="master|main"
+branch_regex="^($unavailable_names)"
+
+printf "\033[0;35m⠹\033[0m Checking branch name..."
+
+if [[ $branch_name =~ $branch_regex ]]; then
+  printf "\r\033[0;31m❯\033[0m Checking branch name...\n"
+  printf "  \033[0;31m✖ Commits are not allowed on ${branch_name}\033[0m"
+  printf " \033[1;30m[FAILED]\033[0m\n"
+  exit 1
+fi
+
+printf "\r\033[0;32m✔\033[0m Checking branch name...\n"
