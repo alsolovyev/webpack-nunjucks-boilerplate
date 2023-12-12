@@ -10,7 +10,8 @@
     "deploy": "git subtree push --prefix dist origin gh-pages",
     "init:hooks": "git config core.hooksPath .github/hooks && chmod +x .github/hooks/*",
     "serve": "cross-env NODE_ENV=development TS_SUPPORT=false webpack serve --profile --progress --config ./config/webpack.config.js",
-    "start": "yarn serve"
+    "start": "yarn serve",
+    "lint": "eslint --config ./config/.eslintrc.js --ext .ts,.js ."
   },
   "devDependencies": {
     "@babel/core": "^7.23.5",
