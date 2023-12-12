@@ -240,6 +240,10 @@ Indicates whether TypeScript support should be enabled. <br/>
 - Terminal
   - [TerminalClearPlugin(internal)](./config/modules/terminal-clear-plugin/index.js)
 
+### Other:
+- Git
+  - [lint-staged](https://github.com/lint-staged/lint-staged)
+
 <br/>
 
 

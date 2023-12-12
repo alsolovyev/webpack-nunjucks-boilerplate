@@ -13,6 +13,10 @@
     "start": "yarn serve",
     "lint": "eslint --config ./config/.eslintrc.js --ext .ts,.js ."
   },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.ts": "eslint"
+  },
   "devDependencies": {
     "@babel/core": "^7.23.5",
     "@babel/eslint-parser": "^7.23.3",
@@ -28,6 +32,7 @@
     "fork-ts-checker-webpack-plugin": "^6.5.2",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.4",
+    "lint-staged": "^15.2.0",
     "mini-css-extract-plugin": "^2.7.6",
     "nunjucks": "^3.2.4",
     "postcss": "^8.4.32",

@@ -17,3 +17,5 @@ if [[ $branch_name =~ $branch_regex ]]; then
 fi
 
 printf "\r\033[0;32m✔\033[0m Checking branch name...\n"
+
+npx lint-staged
