@@ -6,7 +6,8 @@
   "version": "1.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "cross-env NODE_ENV=production TS_SUPPORT=false webpack --profile --progress --config ./config/webpack.config.js",
+    "build:webpack": "cross-env NODE_ENV=production TS_SUPPORT=false webpack --profile --progress --config ./config/webpack.config.js",
+    "build": "yarn lint && yarn format && yarn build:webpack",
     "deploy": "git subtree push --prefix dist origin gh-pages",
     "format:check": "prettier --config ./config/.prettierrc.js --check --ignore-unknown  \"**\"",
     "format:write": "prettier --config ./config/.prettierrc.js --write --ignore-unknown  \"**\"",
