@@ -1,5 +1,4 @@
 const fs = require('fs')
-const path = require('path')
 const { SOURCE_DIR } = require('../constants')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 

@@ -7,7 +7,7 @@
  * @param {Number} [poolParallelJobs=200] - the number of jobs the poll distributes to the workers
  * @returns {Object}
  */
- module.exports = ({ name, workerParallelJobs = 20, poolParallelJobs = 200 }) => ({
+module.exports = ({ name, workerParallelJobs = 20, poolParallelJobs = 200 }) => ({
   loader: 'thread-loader',
   options: {
     name,
