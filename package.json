@@ -8,12 +8,16 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production TS_SUPPORT=false webpack --profile --progress --config ./config/webpack.config.js",
     "deploy": "git subtree push --prefix dist origin gh-pages",
+    "format:check": "prettier --config ./config/.prettierrc.js --check --ignore-unknown  \"**\"",
+    "format:write": "prettier --config ./config/.prettierrc.js --write --ignore-unknown  \"**\"",
+    "format": "yarn format:write",
     "init:hooks": "git config core.hooksPath .github/hooks && chmod +x .github/hooks/*",
+    "lint": "eslint --config ./config/.eslintrc.js --ext .ts,.js .",
     "serve": "cross-env NODE_ENV=development TS_SUPPORT=false webpack serve --profile --progress --config ./config/webpack.config.js",
-    "start": "yarn serve",
-    "lint": "eslint --config ./config/.eslintrc.js --ext .ts,.js ."
+    "start": "yarn serve"
   },
   "lint-staged": {
+    "*": "prettier --write --ignore-unknown",
     "*.js": "eslint",
     "*.ts": "eslint"
   },
@@ -38,6 +42,7 @@
     "postcss": "^8.4.32",
     "postcss-loader": "^7.3.3",
     "postcss-scss": "^4.0.9",
+    "prettier": "^3.1.1",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",

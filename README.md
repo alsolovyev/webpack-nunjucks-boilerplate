@@ -244,6 +244,9 @@ Indicates whether TypeScript support should be enabled. <br/>
 - Git
   - [lint-staged](https://github.com/lint-staged/lint-staged)
 
+- Code
+  - [prettier](https://prettier.io/)
+
 <br/>
 
 
