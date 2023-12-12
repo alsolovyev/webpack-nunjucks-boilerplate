@@ -4,7 +4,6 @@ const log = require('webpack-log')({ name: 'nunjucks' })
 const schema = require('./schema')
 const iconFn = require('./functions/icon')
 
-
 /**
  * Transpiles nunjucks files into a string.
  * https://webpack.js.org/contribute/writing-a-loader
@@ -17,7 +16,7 @@ const iconFn = require('./functions/icon')
  * @param {String} source - the contents of the raw resource
  * @returns {String} a valid HTML string
  */
-module.exports = function(source) {
+module.exports = function (source) {
   const callback = this.async()
   const { autoescape, context, templates } = this.getOptions(schema)
   const contextData = require(context)
@@ -37,12 +36,12 @@ module.exports = function(source) {
   // Transpile
   env.renderString(source, contextData, (error, HTMLString) => {
     if (error) {
-      const [ location, description ] = error.message.split('\n ')
+      const [location, description] = error.message.split('\n ')
       /**
        * Do not emit an error to prevent the "HTML Webpack"
        * plugin from outputting useless text to the terminal.
        */
-      callback(null, `<pre style='font-size:30px'>${ error.message }</pre>`)
+      callback(null, `<pre style='font-size:30px'>${error.message}</pre>`)
       process.stdout.write('\n')
       log.error(description)
       log.error(location)

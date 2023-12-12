@@ -15,7 +15,7 @@ class Cursor {
    */
   constructor({ className, size, color, factor, audio }) {
     // Prevent Cursor creation on touchscreens
-    if (this.isTouchDevice()) return {  }
+    if (this.isTouchDevice()) return {}
 
     // Allow only one Cursor instance to be created
     if (Cursor.instance instanceof Cursor) return Cursor.instance
@@ -27,7 +27,7 @@ class Cursor {
     this._element = null
     this._position = {
       current: { x: window.innerWidth / 2, y: window.innerHeight / 2 },
-      next:    { x: window.innerWidth / 2, y: window.innerHeight / 2 }
+      next: { x: window.innerWidth / 2, y: window.innerHeight / 2 }
     }
     this._factor = this.clamp(factor || 0.1, 0, 1)
     this._raf = null
@@ -44,12 +44,10 @@ class Cursor {
     this._addEventListeners()
   }
 
-
   /** Creates a cursor element */
   _create() {
     this._element = document.createElement('div')
   }
-
 
   /**
    * Adds cursor styles to the page.
@@ -62,11 +60,11 @@ class Cursor {
 
     styleElement.sheet.insertRule(`.${this._className} {
       position: fixed;
-      width: ${ size }px;
-      height: ${ size }px;
-      margin: -${ size / 2 }px 0 0 -${ size / 2 }px;
+      width: ${size}px;
+      height: ${size}px;
+      margin: -${size / 2}px 0 0 -${size / 2}px;
       border-radius: 50%;
-      background: ${ color };
+      background: ${color};
       pointer-events: none;
       user-select: none;
       -webkit-user-select: none;
@@ -91,15 +89,13 @@ class Cursor {
     }`)
   }
 
-
   /**
    * Adds the created cursor element to the page or to the passed container.
    * @param {HTMLElement} [container=document.body] - the cursor container
    */
-  _insert(container) {
-    (container || document.body).insertAdjacentElement('beforeEnd', this._element)
+  _insert(container = document.body) {
+    container.insertAdjacentElement('beforeEnd', this._element)
   }
-
 
   /**
    * Creates cursor states.
@@ -116,7 +112,6 @@ class Cursor {
     return states
   }
 
-
   /**
    * Sets the state of the cursor.
    * @param {String=} name - the name of the cursor state
@@ -128,20 +123,25 @@ class Cursor {
     this._state['CURRENT'] = name
   }
 
-
   /** Calculates the position of the cursor */
   _calculatePosition() {
-    this._position.current.x = this.lerp(this._position.current.x, this._position.next.x, this._factor)
-    this._position.current.y = this.lerp(this._position.current.y, this._position.next.y, this._factor)
+    this._position.current.x = this.lerp(
+      this._position.current.x,
+      this._position.next.x,
+      this._factor
+    )
+    this._position.current.y = this.lerp(
+      this._position.current.y,
+      this._position.next.y,
+      this._factor
+    )
   }
-
 
   /** Updates the cursor position */
   _updatePosition() {
-    this._element.style.left = `${ this._position.current.x }px`
-    this._element.style.top = `${ this._position.current.y }px`
+    this._element.style.left = `${this._position.current.x}px`
+    this._element.style.top = `${this._position.current.y}px`
   }
-
 
   /** RAF */
   _update() {
@@ -168,11 +168,10 @@ class Cursor {
     audio.volume = volume || 1
 
     return {
-      setVolume: volume => audio.volume = volume,
-      play: () => audio.play().catch(() => {  })
+      setVolume: volume => (audio.volume = volume),
+      play: () => audio.play().catch(() => {})
     }
   }
-
 
   /**
    * Handles mouse move event.
@@ -183,7 +182,6 @@ class Cursor {
     this._position.next.y = clientY
   }
 
-
   /**
    * Handles mouse over event.
    * @param {MouseEvent}
@@ -191,9 +189,8 @@ class Cursor {
   _onMouseOver({ target }) {
     if (target.tagName !== 'A') return
 
-    this._audio .play()
+    this._audio.play()
   }
-
 
   /** Adds event listeners */
   _addEventListeners() {
@@ -201,14 +198,12 @@ class Cursor {
     document.addEventListener('mouseover', this._onMouseOver)
   }
 
-
   /** Binds class methods */
   _bind() {
     this._update = this._update.bind(this)
     this._onMouseMove = this._onMouseMove.bind(this)
     this._onMouseOver = this._onMouseOver.bind(this)
   }
-
 
   /**
    * Sets the cursor position manually.
@@ -219,19 +214,16 @@ class Cursor {
     this._position.next = { x, y }
   }
 
-
   /** Stops updating the cursor state */
   pause() {
     window.cancelAnimationFrame(this._raf)
     this._raf = null
   }
 
-
   /** Starts updating the cursor state */
   play() {
     this._update()
   }
-
 
   /**
    * Returns whether the cursor is being updated.
@@ -241,7 +233,6 @@ class Cursor {
     return !!this._raf
   }
 
-
   /**
    * Sets the state of the cursor.
    * @param {String} [name='DEFAULT'] - the name of the cursor state
@@ -250,7 +241,6 @@ class Cursor {
     this._setState(name || 'DEFAULT')
   }
 
-
   /** Destroys the cursor */
   destroy() {
     document.removeEventListener('mousemove', this._onMouseMove)
@@ -258,7 +248,6 @@ class Cursor {
     window.cancelAnimationFrame(this._raf)
     this._element.remove()
   }
-
 
   /**
    * Returns a linear interpolated value between two values.
@@ -271,7 +260,6 @@ class Cursor {
     return (1 - t) * v1 + t * v2
   }
 
-
   /**
    * Returns a number whose value is limited to the given range.
    * @param {Number} value - the value to restrict inside the range defined by the min and max values
@@ -283,7 +271,6 @@ class Cursor {
     return Math.min(Math.max(value, min), max)
   }
 
-
   /**
    * Returns 'true' if the device being used has a touchscreen; otherwise 'false'.
    * @returns {Boolean}
@@ -292,6 +279,5 @@ class Cursor {
     return 'ontouchstart' in window || navigator.maxTouchPoints
   }
 }
-
 
 export default Cursor

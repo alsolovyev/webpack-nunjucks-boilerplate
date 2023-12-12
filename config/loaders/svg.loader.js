@@ -4,9 +4,8 @@
  */
 const spriteLoader = {
   loader: 'svg-sprite-loader',
-  options: {  }
+  options: {}
 }
-
 
 /**
  * Optimizes svg images with svgo.
@@ -14,14 +13,10 @@ const spriteLoader = {
  */
 const svgoLoader = {
   loader: 'svgo-loader',
-  options: {  }
+  options: {}
 }
-
 
 module.exports = {
   test: /\.svg$/,
-  use: [
-    spriteLoader,
-    svgoLoader
-  ]
+  use: [spriteLoader, svgoLoader]
 }

@@ -2,7 +2,6 @@ const path = require('path')
 const { SOURCE_DIR } = require('../constants')
 const createThreadLoader = require('../utils/createThreadLoader')
 
-
 /**
  * Runs the following loaders in a worker pool.
  * https://github.com/webpack-contrib/thread-loader.
@@ -11,16 +10,14 @@ const threadLoader = createThreadLoader({
   name: 'Njk Pool'
 })
 
-
 /**
  * Exports HTML as string.
  * https://github.com/webpack-contrib/html-loader
  */
 const htmlLoader = {
   loader: 'html-loader',
-  options: {  }
+  options: {}
 }
-
 
 /**
  * Transpiles nunjucks files into HTML files.
@@ -35,12 +32,7 @@ const nunjucksLoader = {
   }
 }
 
-
 module.exports = {
   test: /\.(njk|nunjucks|html)$/i,
-  use: [
-    threadLoader,
-    htmlLoader,
-    nunjucksLoader
-  ]
+  use: [threadLoader, htmlLoader, nunjucksLoader]
 }

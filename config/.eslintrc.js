@@ -1,6 +1,5 @@
 const { IS_DEV_MODE } = require('./constants')
 
-
 /**
  * Eslint rules:
  *  - https://eslint.org/docs/rules/
@@ -23,7 +22,7 @@ module.exports = {
   },
   extends: 'eslint:recommended',
   rules: {
-    'indent': ['error', 2, { 'SwitchCase': 1 }],
+    indent: ['error', 2, { SwitchCase: 1 }],
     'no-console': IS_DEV_MODE ? 'warn' : 'error',
     'no-unexpected-multiline': 'off'
   },
@@ -31,8 +30,8 @@ module.exports = {
     {
       files: ['*.ts'],
       parser: '@typescript-eslint/parser',
-      parserOptions: {  },
-      extends: ['plugin:@typescript-eslint/recommended'],
+      parserOptions: {},
+      extends: ['plugin:@typescript-eslint/recommended']
       // rules: {  }
     }
   ]
