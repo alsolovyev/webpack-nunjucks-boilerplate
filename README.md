@@ -97,18 +97,15 @@ Just import SCSS files with extension:
 
 ```javascript
 // src/js/dev/icons.js
-import "@/icons/github.svg";
+import '@/icons/github.svg'
 ```
 
 2. Use this icon in your template
 
+<!-- prettier-ignore -->
 ```javascript
-// *.njk
-{
-  {
-    icon("github", "custom-class-name");
-  }
-}
+// *.njk z
+{{ icon('github', 'custom-class-name') }}
 ```
 
 ### Environment variables
