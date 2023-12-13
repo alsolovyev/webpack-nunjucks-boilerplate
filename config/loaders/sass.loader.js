@@ -1,15 +1,4 @@
 const { IS_DEV_MODE } = require('../constants')
-const createThreadLoader = require('../utils/createThreadLoader')
-
-
-/**
- * Runs the following loaders in a worker pool.
- * https://github.com/webpack-contrib/thread-loader.
- */
-const threadLoader = createThreadLoader({
-  name: 'Sass Pool'
-})
-
 
 /**
  * Injects CSS into the DOM.
@@ -17,9 +6,8 @@ const threadLoader = createThreadLoader({
  */
 const styleLoader = {
   loader: 'style-loader',
-  options: {  }
+  options: {}
 }
-
 
 /**
  * Extracts CSS into separate files.
@@ -27,9 +15,8 @@ const styleLoader = {
  */
 const miniCssExtractLoader = {
   loader: require('mini-css-extract-plugin').loader,
-  options: {  }
+  options: {}
 }
-
 
 /**
  * Interprets @import and url() like import/require() and will resolve them.
@@ -37,9 +24,8 @@ const miniCssExtractLoader = {
  */
 const cssLoader = {
   loader: 'css-loader',
-  options: {  }
+  options: {}
 }
-
 
 /**
  * Transforms styles with JS plugins.
@@ -54,7 +40,6 @@ const postcssLoader = {
   }
 }
 
-
 /**
  * Loads a Sass/SCSS file and compiles it to CSS.
  * https://github.com/webpack-contrib/sass-loader
@@ -65,7 +50,6 @@ const sassLoader = {
     additionalData: `$isDev: ${IS_DEV_MODE}`
   }
 }
-
 
 module.exports = {
   test: /\.s[ac]ss$/i,

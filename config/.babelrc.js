@@ -1,8 +1,4 @@
 module.exports = {
-  "presets": [
-    [
-      "@babel/preset-env", { "modules": false, "loose": true }
-    ]
-  ],
-  "plugins": []
+  presets: [['@babel/preset-env', { modules: false, loose: true }]],
+  plugins: []
 }

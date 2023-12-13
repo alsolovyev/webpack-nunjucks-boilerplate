@@ -1,7 +1,6 @@
 const sassLoader = require('../loaders/sass.loader.js')
 const assetLoader = require('../loaders/asset.loader.js')
 
-
 module.exports = {
   name: 'webpack-development-config',
   mode: 'development',
@@ -26,9 +25,6 @@ module.exports = {
     builtAt: true
   },
   module: {
-    rules: [
-      sassLoader,
-      assetLoader
-    ]
+    rules: [sassLoader, assetLoader]
   }
 }

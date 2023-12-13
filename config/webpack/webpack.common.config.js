@@ -7,7 +7,6 @@ const javascriptLoader = require('../loaders/javascript.loader.js')
 const nunjucksLoader = require('../loaders/nunjucks.loader.js')
 const svgLoader = require('../loaders/svg.loader.js')
 
-
 module.exports = {
   name: 'webpack-common-config',
   context: SOURCE_DIR,
@@ -21,17 +20,8 @@ module.exports = {
     }
   },
   stats: { all: false },
-  plugins: [
-    clearTerminal,
-    ...htmlPlugin,
-    eslintPlugin,
-    stylelintPlugin
-  ],
+  plugins: [clearTerminal, ...htmlPlugin, eslintPlugin, stylelintPlugin],
   module: {
-    rules: [
-      javascriptLoader,
-      nunjucksLoader,
-      svgLoader
-    ]
+    rules: [javascriptLoader, nunjucksLoader, svgLoader]
   }
 }

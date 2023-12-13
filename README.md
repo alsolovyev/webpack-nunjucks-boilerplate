@@ -1,4 +1,5 @@
 # 📦 Webpack + Nunjucks Boilerplate
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Webpack + Nunjucks boilerplate for static websites that has all the necessary modern tools and optimizations built-in.
@@ -9,8 +10,8 @@ Webpack + Nunjucks boilerplate for static websites that has all the necessary mo
 
 <br/>
 
-
 ## ⚗️ Features
+
 - [Webpack](https://webpack.js.org)
 - [Nunjucks](https://mozilla.github.io/nunjucks) (supports multiple pages)
 - [Babel](https://babeljs.io)
@@ -21,12 +22,10 @@ Webpack + Nunjucks boilerplate for static websites that has all the necessary mo
 - [StyleLint](https://stylelint.io)
 - [SVG Sprite](https://github.com/JetBrains/svg-sprite-loader)
 
-
 <br/>
 
-
-
 ## 🚀 Usage
+
 ```bash
 # Clone repository
 git clone https://github.com/alsolovyev/webpack-boilerplate.git project-name
@@ -49,8 +48,6 @@ yarn deploy
 
 <br/>
 
-
-
 ## 💻 Available Scripts
 
 - `serve` - run the `webpack-dev-server`
@@ -59,13 +56,12 @@ yarn deploy
 
 <br/>
 
-
-
 ## 📘 Documentation
 
 ### TypeScript Support
 
 By default, TypeScript support is disabled. To enable it, set the `TS_SUPPORT` environment variable to `true` in `package.json`.
+
 ```bash
 ... TS_SUPPORT=true ...
 ```
@@ -73,6 +69,7 @@ By default, TypeScript support is disabled. To enable it, set the `TS_SUPPORT` e
 ### Multiple pages
 
 Just create nunjucks files in `src` folder
+
 ```
 ┣━ js
 ┣━ njk
@@ -83,7 +80,9 @@ Just create nunjucks files in `src` folder
 ```
 
 ### SCSS files
+
 Just import SCSS files with extension:
+
 ```sass
 // app.sass
 // ...
@@ -95,14 +94,21 @@ Just import SCSS files with extension:
 ### SVG sprite
 
 1. Import SVG icon
+
 ```javascript
 // src/js/dev/icons.js
 import '@/icons/github.svg'
 ```
+
 2. Use this icon in your template
+
 ```javascript
 // *.njk
-{{ icon('github') | safe }}
+{
+  {
+    icon('github') | safe
+  }
+}
 ```
 
 ### Environment variables
@@ -141,13 +147,12 @@ Indicates the directory where the source files are located.
 > Default: `none`
 
 Indicates whether TypeScript support should be enabled. <br/>
-*`none` is equal to `false`*
+_`none` is equal to `false`_
 
 <br/>
 
-
-
 ## 🔨 Task List
+
 - [x] ~~Have a cup of tea~~
 - [x] ~~Clear the terminal screen~~ ([c73fd0](https://github.com/alsolovyev/webpack-boilerplate/commit/c73fd0d4cbf53da72866ac9a326f27f9d62fbf79))
 - [x] ~~Enable ESLint for TypeScript files~~ ([c27e7b](https://github.com/alsolovyev/webpack-nunjucks-boilerplate/commit/c27e7be368fedff85817efc422e5ffe7233eda39))
@@ -162,30 +167,32 @@ Indicates whether TypeScript support should be enabled. <br/>
 - [ ] Enable caching
 - [ ] Add native OS notifications
 
-
 <br/>
-
-
 
 ## 📓 Dependencies
 
 ### Webpack:
+
 - [webpack](https://github.com/webpack/webpack)
 - [webpack-cli](https://github.com/webpack/webpack-cli)
 - [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 
 ### Loaders:
+
 - Nunjucks
+
   - [html-loader](https://github.com/webpack-contrib/html-loader)
   - [njk-loader(internal)](./config/modules/njk-loader/index.js)
     - [nunjucks](https://github.com/mozilla/nunjucks)
 
 - JavaScript
+
   - [babel-loader](https://github.com/babel/babel-loader)
     - [@babel/core](https://github.com/babel/babel)
     - [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
 
 - TypeScript
+
   - [babel-loader](https://github.com/babel/babel-loader)
     - [@babel/core](https://github.com/babel/babel)
     - [@babel/preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env)
@@ -193,6 +200,7 @@ Indicates whether TypeScript support should be enabled. <br/>
     - [typescript](https://github.com/microsoft/TypeScript)
 
 - CSS
+
   - [style-loader](https://github.com/webpack-contrib/style-loader)
   - [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
   - [css-loader](https://github.com/webpack-contrib/css-loader)
@@ -203,9 +211,11 @@ Indicates whether TypeScript support should be enabled. <br/>
     - [sass](https://github.com/sass/sass)
 
 - Assets
+
   - [asset modules](https://webpack.js.org/guides/asset-modules)
 
 - SVG
+
   - [svg-sprite-loader](https://github.com/JetBrains/svg-sprite-loader)
   - [svgo-loader](https://github.com/svg/svgo-loader)
 
@@ -215,15 +225,19 @@ Indicates whether TypeScript support should be enabled. <br/>
 ### Plugins:
 
 - HTML
+
   - [HtmlWebpackPlugin](https://github.com/jantimon/html-webpack-plugin)
 
 - TypeScript
+
   - [fork-ts-checker-webpack-plugin](https://github.com/TypeStrong/fork-ts-checker-webpack-plugin)
 
 - CSS
+
   - [MiniCssExtractPlugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
 
 - Eslint
+
   - [eslint-webpack-plugin](https://github.com/webpack-contrib/eslint-webpack-plugin)
     - [ESLint](https://github.com/eslint/eslint)
     - [@babel/core](https://github.com/babel/babel)
@@ -232,6 +246,7 @@ Indicates whether TypeScript support should be enabled. <br/>
     - [@typescript-eslint/eslint-plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin)
 
 - Stylelint
+
   - [stylelint-webpack-plugin](https://github.com/webpack-contrib/stylelint-webpack-plugin)
     - [postcss-sass](https://github.com/AleshaOleg/postcss-sass)
     - [postcss-scss](https://github.com/postcss/postcss-scss)
@@ -240,16 +255,23 @@ Indicates whether TypeScript support should be enabled. <br/>
 - Terminal
   - [TerminalClearPlugin(internal)](./config/modules/terminal-clear-plugin/index.js)
 
+### Other:
+
+- Git
+
+  - [lint-staged](https://github.com/lint-staged/lint-staged)
+
+- Code
+  - [prettier](https://prettier.io/)
+
 <br/>
-
-
 
 ## 💩 Authors
-* **[Aleksey Solovyev](https://github.com/alsolovyev)** - [solovyev.a@icloud.com](mailto:solovyev.a@icloud.com)
+
+- **[Aleksey Solovyev](https://github.com/alsolovyev)** - [solovyev.a@icloud.com](mailto:solovyev.a@icloud.com)
 
 <br/>
 
-
-
 ## 📖 License
+
 This project is licensed under the [MIT](./LICENSE) License

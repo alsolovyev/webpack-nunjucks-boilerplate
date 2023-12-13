@@ -1,6 +1,5 @@
 const createThreadLoader = require('../utils/createThreadLoader')
 
-
 /**
  * Runs the following loaders in a worker pool.
  * https://github.com/webpack-contrib/thread-loader.
@@ -8,7 +7,6 @@ const createThreadLoader = require('../utils/createThreadLoader')
 const threadLoader = createThreadLoader({
   name: 'JS Pool'
 })
-
 
 /**
  * Transpiles JavaScript files using Babel.
@@ -19,12 +17,8 @@ const babelLoader = {
   options: require('../.babelrc')
 }
 
-
 module.exports = {
   test: /\.js$/i,
   exclude: /node_modules/,
-  use: [
-    threadLoader,
-    babelLoader
-  ]
+  use: [threadLoader, babelLoader]
 }

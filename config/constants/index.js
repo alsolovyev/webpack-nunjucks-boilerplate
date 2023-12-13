@@ -1,7 +1,6 @@
 const path = require('path')
 const CWD = process.cwd()
 
-
 module.exports = {
   /**
    * Indicates whether to run the webpack in development mode or not.

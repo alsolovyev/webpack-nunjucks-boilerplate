@@ -3,16 +3,15 @@ const sassLoader = require('../loaders/sass.loader.js')
 const assetLoader = require('../loaders/asset.loader.js')
 const cssExtractPlugin = require('../plugins/cssExtract.plugin.js')
 
-
 module.exports = {
   name: 'webpack-production-config',
   mode: 'production',
-  target: ['web', /* 'es5' */],
+  target: ['web' /* 'es5' */],
   devtool: 'source-map',
   output: {
     publicPath: PUBLIC_PATH,
     path: OUTPUT_DIR,
-    filename: ({ chunk: { name } }) => `js/${ name === 'common' ? 'app' : name }.[fullhash:8].js`,
+    filename: ({ chunk: { name } }) => `js/${name === 'common' ? 'app' : name}.[fullhash:8].js`,
     assetModuleFilename: '[path][name][hash:8][ext]',
     clean: true
   },
@@ -25,13 +24,8 @@ module.exports = {
     builtAt: true,
     publicPath: true
   },
-  plugins: [
-    cssExtractPlugin
-  ],
+  plugins: [cssExtractPlugin],
   module: {
-    rules: [
-      sassLoader,
-      assetLoader
-    ]
+    rules: [sassLoader, assetLoader]
   }
 }

@@ -5,7 +5,6 @@ const productionConfig = require('./webpack/webpack.production.config.js')
 const typescriptConfig = require('./webpack/webpack.typescript.config.js')
 const { IS_TS_SUPPORTED, IS_DEV_MODE } = require('./constants')
 
-
 module.exports = merge(
   commonConfig,
   IS_DEV_MODE ? developmentConfig : productionConfig,
