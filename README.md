@@ -97,7 +97,7 @@ Just import SCSS files with extension:
 
 ```javascript
 // src/js/dev/icons.js
-import '@/icons/github.svg'
+import "@/icons/github.svg";
 ```
 
 2. Use this icon in your template
@@ -106,7 +106,7 @@ import '@/icons/github.svg'
 // *.njk
 {
   {
-    icon('github') | safe
+    icon("github", "custom-class-name");
   }
 }
 ```
