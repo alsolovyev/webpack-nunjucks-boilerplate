@@ -18,9 +18,9 @@
     "start": "yarn serve"
   },
   "lint-staged": {
-    "*": "prettier --write --ignore-unknown",
-    "*.js": "eslint",
-    "*.ts": "eslint"
+    "*": "prettier --config ./config/.prettierrc.js --write --ignore-unknown  \"**\"",
+    "*.js": "eslint --config ./config/.eslintrc.js",
+    "*.ts": "eslint --config ./config/.eslintrc.js"
   },
   "devDependencies": {
     "@babel/core": "^7.23.5",
