@@ -42,6 +42,7 @@
     "nunjucks": "^3.2.4",
     "postcss": "^8.4.32",
     "postcss-loader": "^7.3.3",
+    "postcss-sass": "^0.5.0",
     "postcss-scss": "^4.0.9",
     "prettier": "^3.1.1",
     "sass": "^1.69.5",
