@@ -34,7 +34,7 @@
     "css-loader": "^6.8.1",
     "eslint": "^8.55.0",
     "eslint-webpack-plugin": "^4.0.1",
-    "fork-ts-checker-webpack-plugin": "^6.5.2",
+    "fork-ts-checker-webpack-plugin": "^6.5.3",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.4",
     "lint-staged": "^15.2.0",
